@@ -93,7 +93,7 @@
 		    	<fileset dir="${destdir}" includes="**/*.jar" />
 		  	</path>
 		</signjar>
-		<copy todir="${jwsdir}" file="src/net/generalised/genedit/resources/GNSchema.xsd" /> <!-- TODO: in jar only -->
+		<copy todir="${jwsdir}" file="src/net/generalised/genedit/resources/GNschema.xsd" /> <!-- TODO: in jar only -->
 		<copy todir="${jwsdir}" file="jws/genedit.jnlp" />
 		<!-- TODO: ftp -->
 	</target>

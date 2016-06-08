@@ -6,6 +6,6 @@ gdiplus.dll
 MatLabAdapter.exe
 run.bat
 run.sh
-GNSchema.xsd
+GNschema.xsd
 MatLabAdapter_readme.txt
 
