@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+
+<gn name="GatedDipoleField"
+    time="1000"
+    fundefs="dipole.gntcfl">
+
+  <transitions>
+
+	<transition id="TY1" priority="29">
+		<inputs> PY1I PY1N PY1E PY1C PEQTime</inputs>
+		<outputs> PY1N PY1E PB_Y1 PEQTime</outputs>
+		<predicates>
+			initial_moment false Y1WantsEq false
+			Y1NoEqOrder Y1EqOrder false false
+			Y1NumOrder false false false
+			false false Y1WantsEq_or_EqOrder false
+			false false false Y1EqOrder
+		</predicates>
+	</transition>
+
+	<transition id="TY2" priority="30">
+		<inputs> PY2I PY2N PY2E PY2C </inputs>
+		<outputs> PY2N PY2E PB_Y2 </outputs>
+		<predicates>
+			false initial_moment not_initial_moment
+			Y2NoEqOrder Y2EqOrder false
+			Y2NumOrder false false
+			false false Y2WantsEq_or_EqOrder
+		</predicates>
+	</transition>
+
+	<transition id="TS1" priority="10">
+		<inputs> PS1OI PS1NI PS1TI PS1O PS1N PS1T PS1C </inputs>
+		<outputs> PS1O  PS1N PS1T PB_S1 </outputs>
+		<predicates>
+			SignalChangeS1 false false false
+			false SignalChangeS1 false false
+			false false SignalChangeS1 initial_moment
+			SignalChangeS1 false false false
+			false SignalChangeS1 false false
+			false false SignalChangeS1 false
+			false false false true
+		</predicates>
+	</transition>
+
+	<transition id="TS2" priority="10">
+		<inputs> PS2OI PS2NI PS2TI PS2O PS2N PS2T PS2C </inputs>
+		<outputs> PS2O  PS2N PS2T PB_S2 </outputs>
+		<predicates>
+			SignalChangeS2 false false false
+			false SignalChangeS2 false false
+			false false SignalChangeS2 initial_moment
+			SignalChangeS2 false false false
+			false SignalChangeS2 false false
+			false false SignalChangeS2 false
+			false false false true
+		</predicates>
+	</transition>
+
+	<transition id="TZ1" priority="5">
+		<inputs> PZ1I PZ1 </inputs>
+		<outputs> PZ1 </outputs>
+		<predicates>
+			true
+			true
+		</predicates>
+	</transition>
+
+	<transition id="TZ2" priority="5">
+		<inputs> PZ2I PZ2 </inputs>
+		<outputs> PZ2 </outputs>
+		<predicates>
+			true
+			true
+		</predicates>
+	</transition>
+
+	<transition id="TY3" priority="0">
+		<inputs> PY3I PY3 </inputs>
+		<outputs> PY3 </outputs>
+		<predicates>
+			true
+			true
+		</predicates>
+	</transition>
+
+	<transition id="TY4" priority="0">
+		<inputs> PY4I PY4 </inputs>
+		<outputs> PY4 </outputs>
+		<predicates>
+			true
+			true
+		</predicates>
+	</transition>
+
+	<transition id="TY5" priority="30">
+		<inputs> PY5I1 PY5I2 PY5CAE PY5N PY5E PY5CB PY5Win </inputs>
+		<outputs> PAECY5 PY5N PY5E PB_Y5 PY5Win</outputs>
+		<predicates>
+			false false false false WinnerChange
+			false initial_moment false Y5WantsEq false
+			WinnerChange false false false false
+			false Y5NoEqOrder Y5EqOrder false false
+			false Y5NumOrder false false false
+			false false false Y5WantsEq_or_EqOrder false
+			false false false false WinnerChange
+		</predicates>
+	</transition>
+
+	<transition id="TY6" priority="0">
+		<inputs> PY6I PY6 </inputs>
+		<outputs> PY6 </outputs>
+		<predicates>
+			true
+			true
+		</predicates>
+	</transition>
+
+	<transition id="TAE" priority="40">
+		<inputs> PAEI1 PAEI2 PAEOn PAEOff PAECB PAECY5 PAETime</inputs>
+		<outputs> PAEOn PAEOff PB_AE PY5CAE PAETime</outputs>
+		<predicates>
+			false false AEUp initial_moment false
+			false true false false false
+			false AEDown false false false
+			AEUp false false false false
+			false false AEChange false false
+			false false false true false
+			false false false false AEUp
+		</predicates>
+	</transition>
+
+	<transition id="TB" priority="35">
+		<inputs> PB_S1 PB_Y1 PB_Y2 PB_S2 PB_Y5 PB_AE PB_Num</inputs>
+		<outputs> PS1C PY1C PY2C PS2C PY5CB PAECB PNumC </outputs>
+		<predicates>
+			AllWantEq_or_B_AEChange false false false false false false
+			false AllWantEq_or_AEUp false false false false false
+			false false AllWantEq_or_AEUp false false false false
+			false false false B_AEChange false false false
+			false false false false AllWantEq_or_AEUp false false
+			false false false false false true false
+			false false false false false false AllWantEq_or_AEUp
+		</predicates>
+	</transition>
+
+	<transition id="TNum" priority="35">
+		<inputs> PNumI PNumE PNumSolve PNumC </inputs>
+		<outputs> PNumE PNumSolve PB_Num </outputs>
+		<predicates>
+			false initial_moment not_initial_moment
+			false NumSolveOrder false
+			NumEqOrder NumNoEqOrder false
+			false false true
+		</predicates>
+	</transition>
+
+	<transition id="TConst" priority="0">
+		<inputs> PConstants PConstants2 </inputs>
+		<outputs> PConstants PConstants3</outputs>
+		<predicates>
+				 false false
+		 		 false true
+		</predicates>
+	</transition>
+
+  </transitions>
+
+  <places>
+	<place id="PY1I"/>	
+	<place id="PY1N" char="GetNumValueY1" priority="1"/>	
+	<place id="PY1E" char="GetEqValue" priority="1"/>	
+	<place id="PB_Y1" priority="5"/>
+	
+	<place id="PY2I"/>
+	<place id="PY2N" char="GetNumValueY2" priority="1"/>
+	<place id="PY2E" char="GetEqValue" priority="1"/>
+	<place id="PB_Y2" priority="4"/>
+
+	<place id="PS1OI" priority="1"/>
+	<place id="PS1NI"/>
+	<place id="PS1TI"/>
+	<place id="PS1O" char="UpdateOldS1" priority="1"/>
+	<place id="PS1N" char="UpdateNewS1"/>
+	<place id="PS1T" char="GetTime"/>
+	<place id="PB_S1" priority="6"/>
+
+	<place id="PS2OI" priority="1"/>
+	<place id="PS2NI"/>
+	<place id="PS2TI"/>
+	<place id="PS2O" char="UpdateOldS2" priority="1"/>
+	<place id="PS2N" char="UpdateNewS2"/>
+	<place id="PS2T" char="GetTime"/>
+	<place id="PB_S2" priority="3"/>
+
+	<place id="PZ1I"/>
+	<place id="PZ1" char="Z1Value"/>
+
+	<place id="PZ2I"/>
+	<place id="PZ2" char="Z2Value"/>
+
+	<place id="PY3I"/>
+	<place id="PY3" char="EvalY3"/>
+
+	<place id="PY4I"/>
+	<place id="PY4" char="EvalY4"/>
+
+	<place id="PY5I1"/>
+	<place id="PY5I2"/>
+	<place id="PY5Win" char="GetCurrentWinner" priority="10"/>
+	<place id="PY5N" char="GetNumValueY5" priority="1"/>
+	<place id="PY5E" char="GetEqValue" priority="1"/>
+	<place id="PB_Y5" priority="2"/>
+	<place id="PAECY5" priority="10"/>
+
+	<place id="PY6I"/>
+	<place id="PY6" char="EvalY6"/>
+
+	<place id="PAEI1"/>
+	<place id="PAEI2"/>
+	<place id="PAEOn" char="SetOne" priority="1"/>
+	<place id="PAEOff" char="SetZero" priority="1"/>
+	<place id="PB_AE" char="GetAEActivity1"/>
+	<place id="PY5CAE" priority="1"/>
+	<place id="PAETime" char="GetCurrentTime"/>
+
+	<place id="PS1C" char="SendS1Order"/>
+	<place id="PS2C" char="SendS2Order"/>
+	<place id="PY1C" char="SendY1Order"/>
+	<place id="PY2C" char="SendY2Order"/>
+	<place id="PY5CB" char="SendY5Order"/>
+	<place id="PAECB" priority="10"/>
+	<place id="PNumC" char="SendNumOrder"/>
+
+	<place id="PNumI"/>
+	<place id="PNumE"/>
+	<place id="PNumSolve" char="RungeKuta4"/>
+	<place id="PB_Num"/>
+
+	<place id="PConstants"/>
+	<place id="PConstants2" priority="200"/>
+	<place id="PConstants3" char="Exponent" priority="200"/>
+
+	<place id="PEQTime" char="GetCurrentTime"/>
+	
+  </places>
+
+  <tokens>
+
+	<token id="Y1" host="PY1I" type="vector" default="nx 100 0" priority="1"/>
+	<token id="CY1-B" host="PY1I" type="double" default="nx 100 0" priority="0"/>
+	
+	<token id="Y2" host="PY2I" type="vector" default="nx 100 0" priority="1"/>
+	<token id="CY2-B" host="PY2I" type="double" default="0" priority="0"/>
+
+	<token id="S1Old" host="PS1OI" type="vector" default="nx 100 0"/>
+	<token id="S1New" host="PS1NI" type="vector" default="nx 100 0"/>
+	<token id="S1Time" host="PS1TI" type="vector" default="nx 100 0"/>
+	<token id="CS1-B" host="PS1TI" type="double" default="0" priority="1"/>
+
+	<token id="S2Old" host="PS2OI" type="double" default="0"/>
+	<token id="S2New" host="PS2NI" type="double" default="0"/>
+	<token id="S2Time" host="PS2TI" type="double" default="0"/>
+	<token id="CS2-B" host="PS2TI" type="double" default="0" priority="1"/>
+
+	<token id="Z1" host="PZ1I" type="vector" default="nx 100 0.5"/>
+	
+	<token id="Z2" host="PZ2I" type="double" default="0"/>
+	
+	<token id="Y3" host="PY3I" type="vector" default="nx 100 0"/>
+	
+	<token id="Y4" host="PY4I" type="vector" default="nx 100 0"/>
+
+	<token id="Winner" host="PY5I1" type="double" default="0"/>
+	<token id="Y5" host="PY5I2" type="vector" default="nx 100 0"  priority="1"/>
+	<token id="CY5-B" host="PY5I2" type="double" default="0"/>
+
+	<token id="Y6" host="PY6I" type="vector" default="nx 100 0"/>
+
+	<token id="CAE-B" host="PAEI1" type="double" default="0"/>
+	<token id="CY5-AE" host="PAEI1" type="double" default="0" priority="1"/>
+	<token id="AE" host="PAEI2" type="double" default="0" priority="1"/>
+	<token id="AETime" host="PAETime" type="double" default="0"/>
+
+	<token id="CNum-B" host="PNumI" type="double" default="0"/>
+	<token id="NumToken" host="PNumI" type="vector" default="[nx 100 0] [nx 100 0] [nx 100 0]" priority="1"/>
+
+	<token id="constM" host="PConstants" type="double" default="100"/>
+	<token id="constA" host="PConstants" type="double" default="0.001"/>
+	<token id="constB" host="PConstants" type="double" default="1"/>
+	<token id="constE" host="PConstants" type="double" default="0.01"/>
+	<token id="constEps" host="PConstants" type="double" default="0.001"/>
+	<token id="constGamma" host="PConstants" type="double" default="0.5"/>
+	<token id="constBeta" host="PConstants" type="double" default="0.5"/>
+	<token id="constDelta" host="PConstants" type="double" default="1"/>
+	<token id="constGAMMA" host="PConstants" type="double" default="0.1"/>
+	<token id="constTolerance" host="PConstants" type="double" default="0.05"/>
+	<token id="constSteps" host="PConstants" type="double" default="5"/>
+	<token id="constAERatio" host="PConstants" type="double" default="0.9"/>
+	<token id="H" host="PConstants2" type="vector" default="nx 100 0"/>
+	
+	<token id="EQTime" host="PEQTime" type="double" default="-100"/>
+  </tokens>
+
+</gn>

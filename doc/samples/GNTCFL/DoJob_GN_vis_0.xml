@@ -1,0 +1,1688 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<gn:gn xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:gn="http://www.clbme.bas.bg/GN" xmlns:pregn="http://www.clbme.bas.bg/GN-UML-Intermediate" xmlns:uml="http://schema.omg.org/spec/UML/2.0" xmlns:umlfn="http://www.clbme.bas.bg/UML2GNFunctions" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.clbme.bas.bg/GN GNschema.xsd" name="DoJob">
+  <gn:transitions>
+    <gn:transition id="_11_5_1e3f04cc_1157614203718_667823_72" name="r" positionX="90" positionY="130" sizeY="240">
+      <gn:inputs>
+        <gn:input ref="_11_5_1e3f04cc_1157619130031_353288_667">
+          <gn:arc>
+            <gn:point positionX="115" positionY="350" />
+            <gn:point positionX="125" positionY="350" />
+            <gn:point positionX="125" positionY="380" />
+            <gn:point positionX="55" positionY="380" />
+            <gn:point positionX="55" positionY="350" />
+            <gn:point positionX="90" positionY="350" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_1e3f04cc_1157619142859_835478_678">
+          <gn:arc>
+            <gn:point positionX="115" positionY="170" />
+            <gn:point positionX="185" positionY="170" />
+            <gn:point positionX="185" positionY="560" />
+            <gn:point positionX="-5" positionY="560" />
+            <gn:point positionX="-5" positionY="170" />
+            <gn:point positionX="90" positionY="170" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_1e3f04cc_1157635319717_498706_1108">
+          <gn:arc>
+            <gn:point positionX="115" positionY="200" />
+            <gn:point positionX="175" positionY="200" />
+            <gn:point positionX="175" positionY="530" />
+            <gn:point positionX="5" positionY="530" />
+            <gn:point positionX="5" positionY="200" />
+            <gn:point positionX="90" positionY="200" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_1e3f04cc_1157706765196_398151_208">
+          <gn:arc>
+            <gn:point positionX="115" positionY="230" />
+            <gn:point positionX="165" positionY="230" />
+            <gn:point positionX="165" positionY="500" />
+            <gn:point positionX="15" positionY="500" />
+            <gn:point positionX="15" positionY="230" />
+            <gn:point positionX="90" positionY="230" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_1e3f04cc_1157615438203_347005_415">
+          <gn:arc>
+            <gn:point positionX="80" positionY="140" />
+            <gn:point positionX="90" positionY="140" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_1e3f04cc_1157614203718_667823_72_LocalMemory">
+          <gn:arc>
+            <gn:point positionX="115" positionY="260" />
+            <gn:point positionX="155" positionY="260" />
+            <gn:point positionX="155" positionY="470" />
+            <gn:point positionX="25" positionY="470" />
+            <gn:point positionX="25" positionY="260" />
+            <gn:point positionX="90" positionY="260" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_1e3f04cc_1157615442312_898407_422">
+          <gn:arc>
+            <gn:point positionX="115" positionY="290" />
+            <gn:point positionX="145" positionY="290" />
+            <gn:point positionX="145" positionY="440" />
+            <gn:point positionX="35" positionY="440" />
+            <gn:point positionX="35" positionY="290" />
+            <gn:point positionX="90" positionY="290" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_1e3f04cc_1157615455296_733102_446">
+          <gn:arc>
+            <gn:point positionX="115" positionY="320" />
+            <gn:point positionX="135" positionY="320" />
+            <gn:point positionX="135" positionY="410" />
+            <gn:point positionX="45" positionY="410" />
+            <gn:point positionX="45" positionY="320" />
+            <gn:point positionX="90" positionY="320" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="_11_5_1e3f04cc_1157617382125_236454_626">
+          <gn:arc>
+            <gn:point positionX="90" positionY="140" />
+            <gn:point positionX="105" positionY="140" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_1e3f04cc_1157619130031_353288_667">
+          <gn:arc>
+            <gn:point positionX="90" positionY="350" />
+            <gn:point positionX="105" positionY="350" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_1e3f04cc_1157619142859_835478_678">
+          <gn:arc>
+            <gn:point positionX="90" positionY="170" />
+            <gn:point positionX="105" positionY="170" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_1e3f04cc_1157635319717_498706_1108">
+          <gn:arc>
+            <gn:point positionX="90" positionY="200" />
+            <gn:point positionX="105" positionY="200" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_1e3f04cc_1157706765196_398151_208">
+          <gn:arc>
+            <gn:point positionX="90" positionY="230" />
+            <gn:point positionX="105" positionY="230" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_1e3f04cc_1157614203718_667823_72_LocalMemory">
+          <gn:arc>
+            <gn:point positionX="90" positionY="260" />
+            <gn:point positionX="105" positionY="260" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_1e3f04cc_1157615442312_898407_422">
+          <gn:arc>
+            <gn:point positionX="90" positionY="290" />
+            <gn:point positionX="105" positionY="290" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_1e3f04cc_1157615455296_733102_446">
+          <gn:arc>
+            <gn:point positionX="90" positionY="320" />
+            <gn:point positionX="105" positionY="320" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="_11_5_1e3f04cc_1157615455296_733102_446" output="_11_5_1e3f04cc_1157615455296_733102_446">W_11_5_1e3f04cc_1157615455296_733102_446__11_5_1e3f04cc_1157615455296_733102_446</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157615455296_733102_446" output="_11_5_1e3f04cc_1157706765196_398151_208">W_11_5_1e3f04cc_1157615455296_733102_446__11_5_1e3f04cc_1157706765196_398151_208</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157615455296_733102_446" output="_11_5_1e3f04cc_1157619130031_353288_667">W_11_5_1e3f04cc_1157615455296_733102_446__11_5_1e3f04cc_1157619130031_353288_667</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157615455296_733102_446" output="_11_5_1e3f04cc_1157617382125_236454_626">W_11_5_1e3f04cc_1157615455296_733102_446__11_5_1e3f04cc_1157617382125_236454_626</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157615442312_898407_422" output="_11_5_1e3f04cc_1157615455296_733102_446">W_11_5_1e3f04cc_1157615442312_898407_422__11_5_1e3f04cc_1157615455296_733102_446</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157615442312_898407_422" output="_11_5_1e3f04cc_1157706765196_398151_208">W_11_5_1e3f04cc_1157615442312_898407_422__11_5_1e3f04cc_1157706765196_398151_208</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157615442312_898407_422" output="_11_5_1e3f04cc_1157617382125_236454_626">W_11_5_1e3f04cc_1157615442312_898407_422__11_5_1e3f04cc_1157617382125_236454_626</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157615438203_347005_415" output="_11_5_1e3f04cc_1157615442312_898407_422">delay</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157706765196_398151_208" output="_11_5_1e3f04cc_1157615455296_733102_446">W_11_5_1e3f04cc_1157706765196_398151_208__11_5_1e3f04cc_1157615455296_733102_446</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157706765196_398151_208" output="_11_5_1e3f04cc_1157706765196_398151_208">W_11_5_1e3f04cc_1157706765196_398151_208__11_5_1e3f04cc_1157706765196_398151_208</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157706765196_398151_208" output="_11_5_1e3f04cc_1157617382125_236454_626">W_11_5_1e3f04cc_1157706765196_398151_208__11_5_1e3f04cc_1157617382125_236454_626</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157635319717_498706_1108" output="_11_5_1e3f04cc_1157615455296_733102_446">W_11_5_1e3f04cc_1157635319717_498706_1108__11_5_1e3f04cc_1157615455296_733102_446</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157635319717_498706_1108" output="_11_5_1e3f04cc_1157706765196_398151_208">W_11_5_1e3f04cc_1157635319717_498706_1108__11_5_1e3f04cc_1157706765196_398151_208</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157635319717_498706_1108" output="_11_5_1e3f04cc_1157617382125_236454_626">W_11_5_1e3f04cc_1157635319717_498706_1108__11_5_1e3f04cc_1157617382125_236454_626</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157619142859_835478_678" output="_11_5_1e3f04cc_1157635319717_498706_1108">delay</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157619130031_353288_667" output="_11_5_1e3f04cc_1157619142859_835478_678">delay</gn:predicate>
+        <gn:predicate input="_11_5_1e3f04cc_1157614203718_667823_72_LocalMemory" output="_11_5_1e3f04cc_1157614203718_667823_72_LocalMemory">true</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="Parameters" name="Parameters" positionX="280" positionY="160" sizeY="30">
+      <gn:inputs>
+        <gn:input ref="ParametersPlace">
+          <gn:arc>
+            <gn:point positionX="305" positionY="170" />
+            <gn:point positionX="315" positionY="170" />
+            <gn:point positionX="315" positionY="200" />
+            <gn:point positionX="245" positionY="200" />
+            <gn:point positionX="245" positionY="170" />
+            <gn:point positionX="280" positionY="170" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="ParametersPlace">
+          <gn:arc>
+            <gn:point positionX="280" positionY="170" />
+            <gn:point positionX="295" positionY="170" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates />
+    </gn:transition>
+  </gn:transitions>
+  <gn:places>
+    <gn:place id="_11_5_1e3f04cc_1157635319717_498706_1108" name="DriveOut" char="_11_5_1e3f04cc_1157635319717_498706_1108_fun" positionX="110" positionY="200" />
+    <gn:place id="_11_5_1e3f04cc_1157706765196_398151_208" name="DriveToStartLine" char="_11_5_1e3f04cc_1157706765196_398151_208_fun" positionX="110" positionY="230" />
+    <gn:place id="_11_5_1e3f04cc_1157615438203_347005_415" name="Workload" char="_11_5_1e3f04cc_1157615438203_347005_415_fun" positionX="70" positionY="140" />
+    <gn:place id="_11_5_1e3f04cc_1157614203718_667823_72_LocalMemory" name="Local Memory of r" char="_11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_fun" positionX="110" positionY="260" />
+    <gn:place id="_11_5_1e3f04cc_1157615442312_898407_422" name="GetJobDetails" char="_11_5_1e3f04cc_1157615442312_898407_422_fun" positionX="110" positionY="290" />
+    <gn:place id="_11_5_1e3f04cc_1157615455296_733102_446" name="FollowLine" char="_11_5_1e3f04cc_1157615455296_733102_446_fun" positionX="110" positionY="320" />
+    <gn:place id="_11_5_1e3f04cc_1157617382125_236454_626" name="" char="_11_5_1e3f04cc_1157617382125_236454_626_fun" positionX="110" positionY="140" />
+    <gn:place id="_11_5_1e3f04cc_1157619130031_353288_667" name="DriveIn" char="_11_5_1e3f04cc_1157619130031_353288_667_fun" positionX="110" positionY="350" />
+    <gn:place id="_11_5_1e3f04cc_1157619142859_835478_678" name="Work" char="_11_5_1e3f04cc_1157619142859_835478_678_fun" positionX="110" positionY="170" />
+    <gn:place id="ParametersPlace" name="ParametersPlace" positionX="300" positionY="170" />
+  </gn:places>
+  <gn:tokens>
+    <gn:token id="_11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token" name="Local Memory of r Token" host="_11_5_1e3f04cc_1157614203718_667823_72_LocalMemory">
+      <gn:char name="Default" type="double">1</gn:char>
+      <gn:char name="Name" type="string">Local Memory of r Token</gn:char>
+    </gn:token>
+    <gn:token id="ParametersToken" host="ParametersPlace">
+      <gn:char name="actualWorkStation" type="vector" />
+      <gn:char name="Black" type="double" />
+      <gn:char name="White" type="double" />
+      <gn:char name="Grey" type="double" />
+    </gn:token>
+  </gn:tokens>
+  <gn:functions>
+											(defun W_11_5_1e3f04cc_1157615455296_733102_446__11_5_1e3f04cc_1157615455296_733102_446 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157624450627_614260_1038 tokenobj time)
+																
+														)
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157625353578_591921_1080 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157700045390_515293_140 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157621746329_827718_721 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157615455296_733102_446__11_5_1e3f04cc_1157706765196_398151_208 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157625353578_591921_1080 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157700045390_515293_140 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157703779899_445957_154 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706069587_419855_170 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706843915_351161_218 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157615455296_733102_446__11_5_1e3f04cc_1157619130031_353288_667 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157625353578_591921_1080 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157625385629_972707_1085 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157615455296_733102_446__11_5_1e3f04cc_1157617382125_236454_626 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157625353578_591921_1080 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157700045390_515293_140 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157703779899_445957_154 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157617391500_51234_633 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157615442312_898407_422__11_5_1e3f04cc_1157615455296_733102_446 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_3afb06b6_1158779465250_882778_161 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706069587_419855_170 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706384102_39474_193 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157621746329_827718_721 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157615442312_898407_422__11_5_1e3f04cc_1157706765196_398151_208 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_3afb06b6_1158779465250_882778_161 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706069587_419855_170 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706843915_351161_218 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157615442312_898407_422__11_5_1e3f04cc_1157617382125_236454_626 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_3afb06b6_1158779465250_882778_161 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157617391500_51234_633 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157706765196_398151_208__11_5_1e3f04cc_1157615455296_733102_446 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157621746329_827718_721 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157706765196_398151_208__11_5_1e3f04cc_1157706765196_398151_208 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157703779899_445957_154 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706069587_419855_170 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706843915_351161_218 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157706765196_398151_208__11_5_1e3f04cc_1157617382125_236454_626 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157703779899_445957_154 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157617391500_51234_633 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157635319717_498706_1108__11_5_1e3f04cc_1157615455296_733102_446 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157703999462_498834_162 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706069587_419855_170 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706384102_39474_193 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157621746329_827718_721 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157635319717_498706_1108__11_5_1e3f04cc_1157706765196_398151_208 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157703999462_498834_162 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706069587_419855_170 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157706843915_351161_218 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+											(defun W_11_5_1e3f04cc_1157635319717_498706_1108__11_5_1e3f04cc_1157617382125_236454_626 "" () ()
+												(and (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))												
+													(or 
+													
+														(and
+														
+																	(W__11_5_1e3f04cc_1157703999462_498834_162 tokenobj time)
+																
+																	(W__11_5_1e3f04cc_1157617391500_51234_633 tokenobj time)
+																
+														)
+													
+													)
+												)
+											)
+										
+						(defun W__11_5_3afb06b6_1158779465250_882778_161 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_3afb06b6_1158779465250_882778_161/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+												; original constraint: numberOfGreyFields:=0
+					(set-named #0 "numberOfGreyFields" 0)
+					(print "numberOfGreyFields := " (get-named #0 "numberOfGreyFields"))
+				
+												; original constraint: i:=0
+					(set-named #0 "i" 0)
+					(print "i := " (get-named #0 "i"))
+				
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated  to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157706843915_351161_218 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157706843915_351161_218/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "numberOfGreyFields&gt;=actualWorkStation[i]"
+												
+					(
+						&gt;= 
+					(getParameter #0 "numberOfGreyFields")
+				 
+													(get-nth 
+					(getParameter #0 "i")
+				 
+					(getParameter #0 "actualWorkStation")
+				
+													)
+												
+					)
+				
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+												; original constraint: numberOfGreyFields:=0
+					(set-named #0 "numberOfGreyFields" 0)
+					(print "numberOfGreyFields := " (get-named #0 "numberOfGreyFields"))
+				
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated numberOfGreyFields&gt;=actualWorkStation[i] to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157706384102_39474_193 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157706384102_39474_193/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "numberOfGreyFields&lt;actualWorkStation[i]"
+												
+							(
+								&lt; 
+					(getParameter #0 "numberOfGreyFields")
+				 
+													(get-nth 
+					(getParameter #0 "i")
+				 
+					(getParameter #0 "actualWorkStation")
+				
+													)
+												
+							)
+						
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated numberOfGreyFields&lt;actualWorkStation[i] to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157706069587_419855_170 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157706069587_419855_170/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "i&lt;length(actualWorkStation)"
+												
+							(
+								&lt; 
+					(getParameter #0 "i")
+				 
+											(begin
+												(print "Length is ")
+												(trace (get-len 
+					(getParameter #0 "actualWorkStation")
+				))
+											)
+										
+							)
+						
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated i&lt;length(actualWorkStation) to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157703999462_498834_162 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157703999462_498834_162/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+												; original constraint: i:=i+1
+					(set-named #0 "i" 
+				(
+					+ 
+					(getParameter #0 "i")
+				 1
+				)
+				)
+					(print "i := " (get-named #0 "i"))
+				
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated  to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157703779899_445957_154 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157703779899_445957_154/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "numberOfGreyFields&gt;=5"
+												
+					(
+						&gt;= 
+					(getParameter #0 "numberOfGreyFields")
+				 5
+					)
+				
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated numberOfGreyFields&gt;=5 to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157700045390_515293_140 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157700045390_515293_140/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "numberOfGreyFields!=actualWorkStation[i]"
+												
+					(
+						!= 
+					(getParameter #0 "numberOfGreyFields")
+				 
+													(get-nth 
+					(getParameter #0 "i")
+				 
+					(getParameter #0 "actualWorkStation")
+				
+													)
+												
+					)
+				
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated numberOfGreyFields!=actualWorkStation[i] to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157625385629_972707_1085 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157625385629_972707_1085/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "numberOfGreyFields=actualWorkStation[i]"
+												
+							(
+								= 
+					(getParameter #0 "numberOfGreyFields")
+				 
+													(get-nth 
+					(getParameter #0 "i")
+				 
+					(getParameter #0 "actualWorkStation")
+				
+													)
+												
+							)
+						
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated numberOfGreyFields=actualWorkStation[i] to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157625353578_591921_1080 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157625353578_591921_1080/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "Grey"
+												
+					(getParameter #0 "Grey")
+				
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+												; original constraint: numberOfGreyFields:=numberOfGreyFields + 1
+					(set-named #0 "numberOfGreyFields" 
+				(
+					+ 
+					(getParameter #0 "numberOfGreyFields")
+				 1
+				)
+				)
+					(print "numberOfGreyFields := " (get-named #0 "numberOfGreyFields"))
+				
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated Grey to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157624450627_614260_1038 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157624450627_614260_1038/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "Black OR White"
+												
+				(or
+					
+					(getParameter #0 "Black")
+				 
+					(getParameter #0 "White")
+				
+				)
+				
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated Black OR White to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157621746329_827718_721 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157621746329_827718_721/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "numberOfGreyFields&lt;5"
+												
+							(
+								&lt; 
+					(getParameter #0 "numberOfGreyFields")
+				 5
+							)
+						
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated numberOfGreyFields&lt;5 to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun W__11_5_1e3f04cc_1157617391500_51234_633 "1;tokens.ParametersToken.obj" (tobj t) (s val)
+							(let s (+ "EvaluatedPredicate/_11_5_1e3f04cc_1157617391500_51234_633/OnStep/" t))
+							; see if the predicate needs evaluation
+							(if (&gt; (get-named tobj s) 0)
+								(let val (- (get-named tobj s) 1))
+								(begin
+									(let val
+										(and 
+											
+												;original guard: "i&gt;=length(actualWorkStation)"
+												
+					(
+						&gt;= 
+					(getParameter #0 "i")
+				 
+											(begin
+												(print "Length is ")
+												(trace (get-len 
+					(getParameter #0 "actualWorkStation")
+				))
+											)
+										
+					)
+				
+										)
+									)
+									(set-named tobj s (+ val 1))
+									(if val 
+										(begin
+											; now execute any existing constraints
+											
+										)
+										0
+									)
+								)
+							)
+							
+							; finaly return predicate value
+							(print "Evaluated i&gt;=length(actualWorkStation) to " (+ val 0))
+							(+ val 0)
+						)
+						
+						(defun delay "" () ()
+						  (&gt;= time (get-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil"))
+						)
+					
+		
+		
+		(defun _11_5_1e3f04cc_1157615455296_733102_446_fun "2;tokens._11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[DoJob] Token " (get-named tokenobj "Name") " is in place FollowLine")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into transition r:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/r" (+ 1 (get-named #1 "lateResponses/r")))
+												(set-named #1 "lateResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/r")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/r" (+ 1 (get-named #1 "timelyResponses/r")))
+												(set-named #1 "timelyResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/r")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/FollowLine/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into place FollowLine:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/FollowLine" (+ 1 (get-named #1 "lateResponses/FollowLine")))
+												(set-named #1 "lateResponsesSumTimes/FollowLine" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/FollowLine")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/FollowLine" (+ 1 (get-named #1 "timelyResponses/FollowLine")))
+												(set-named #1 "timelyResponsesSumTimes/FollowLine" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/FollowLine")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "FollowLine/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "FollowLine/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+									
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 20 "s")
+								(random-normal 0 (convertTime 5 "s"))
+							
+									)
+								)
+								
+								(set-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_1e3f04cc_1157614203718_667823_72" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_1e3f04cc_1157614203718_667823_72")
+								
+		)
+	
+		
+		
+		(defun _11_5_1e3f04cc_1157615442312_898407_422_fun "2;tokens._11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[DoJob] Token " (get-named tokenobj "Name") " is in place GetJobDetails")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into transition r:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/r" (+ 1 (get-named #1 "lateResponses/r")))
+												(set-named #1 "lateResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/r")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/r" (+ 1 (get-named #1 "timelyResponses/r")))
+												(set-named #1 "timelyResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/r")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/GetJobDetails/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into place GetJobDetails:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/GetJobDetails" (+ 1 (get-named #1 "lateResponses/GetJobDetails")))
+												(set-named #1 "lateResponsesSumTimes/GetJobDetails" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/GetJobDetails")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/GetJobDetails" (+ 1 (get-named #1 "timelyResponses/GetJobDetails")))
+												(set-named #1 "timelyResponsesSumTimes/GetJobDetails" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/GetJobDetails")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "GetJobDetails/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "GetJobDetails/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+									
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 50 "ms")
+									)
+								)
+								
+								(set-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_1e3f04cc_1157614203718_667823_72" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_1e3f04cc_1157614203718_667823_72")
+								
+		)
+	
+		
+		
+		(defun _11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_fun "1;tokens.Global.obj;" () ()
+		
+			
+		)
+	
+		
+		
+		(defun _11_5_1e3f04cc_1157615438203_347005_415_fun "1;tokens.Global.obj;" () ()
+		
+			
+		)
+	
+		
+		
+		(defun _11_5_1e3f04cc_1157706765196_398151_208_fun "2;tokens._11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[DoJob] Token " (get-named tokenobj "Name") " is in place DriveToStartLine")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into transition r:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/r" (+ 1 (get-named #1 "lateResponses/r")))
+												(set-named #1 "lateResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/r")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/r" (+ 1 (get-named #1 "timelyResponses/r")))
+												(set-named #1 "timelyResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/r")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/DriveToStartLine/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into place DriveToStartLine:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/DriveToStartLine" (+ 1 (get-named #1 "lateResponses/DriveToStartLine")))
+												(set-named #1 "lateResponsesSumTimes/DriveToStartLine" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/DriveToStartLine")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/DriveToStartLine" (+ 1 (get-named #1 "timelyResponses/DriveToStartLine")))
+												(set-named #1 "timelyResponsesSumTimes/DriveToStartLine" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/DriveToStartLine")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "DriveToStartLine/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "DriveToStartLine/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+									
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 25 "s")
+								(random-normal 0 (convertTime 5 "s"))
+							
+									)
+								)
+								
+								(set-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_1e3f04cc_1157614203718_667823_72" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_1e3f04cc_1157614203718_667823_72")
+								
+		)
+	
+		
+		
+		(defun _11_5_1e3f04cc_1157635319717_498706_1108_fun "2;tokens._11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[DoJob] Token " (get-named tokenobj "Name") " is in place DriveOut")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into transition r:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/r" (+ 1 (get-named #1 "lateResponses/r")))
+												(set-named #1 "lateResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/r")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/r" (+ 1 (get-named #1 "timelyResponses/r")))
+												(set-named #1 "timelyResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/r")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/DriveOut/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into place DriveOut:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/DriveOut" (+ 1 (get-named #1 "lateResponses/DriveOut")))
+												(set-named #1 "lateResponsesSumTimes/DriveOut" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/DriveOut")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/DriveOut" (+ 1 (get-named #1 "timelyResponses/DriveOut")))
+												(set-named #1 "timelyResponsesSumTimes/DriveOut" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/DriveOut")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "DriveOut/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "DriveOut/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+									
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 4 "s")
+									)
+								)
+								
+								(set-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_1e3f04cc_1157614203718_667823_72" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_1e3f04cc_1157614203718_667823_72")
+								
+		)
+	
+		
+		
+		(defun _11_5_1e3f04cc_1157619142859_835478_678_fun "2;tokens._11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[DoJob] Token " (get-named tokenobj "Name") " is in place Work")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into transition r:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/r" (+ 1 (get-named #1 "lateResponses/r")))
+												(set-named #1 "lateResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/r")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/r" (+ 1 (get-named #1 "timelyResponses/r")))
+												(set-named #1 "timelyResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/r")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/Work/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into place Work:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/Work" (+ 1 (get-named #1 "lateResponses/Work")))
+												(set-named #1 "lateResponsesSumTimes/Work" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/Work")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/Work" (+ 1 (get-named #1 "timelyResponses/Work")))
+												(set-named #1 "timelyResponsesSumTimes/Work" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/Work")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "Work/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "Work/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+									(convertTime 10 "s")
+								(random-normal 0 (convertTime 5 "s"))
+							
+									)
+								)
+				
+								(let demand (+ 0
+									
+									)
+								)
+								
+								(set-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_1e3f04cc_1157614203718_667823_72" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_1e3f04cc_1157614203718_667823_72")
+								
+		)
+	
+		
+		
+		(defun _11_5_1e3f04cc_1157619130031_353288_667_fun "2;tokens._11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[DoJob] Token " (get-named tokenobj "Name") " is in place DriveIn")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into transition r:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/r" (+ 1 (get-named #1 "lateResponses/r")))
+												(set-named #1 "lateResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/r")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/r" (+ 1 (get-named #1 "timelyResponses/r")))
+												(set-named #1 "timelyResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/r")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/DriveIn/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into place DriveIn:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/DriveIn" (+ 1 (get-named #1 "lateResponses/DriveIn")))
+												(set-named #1 "lateResponsesSumTimes/DriveIn" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/DriveIn")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/DriveIn" (+ 1 (get-named #1 "timelyResponses/DriveIn")))
+												(set-named #1 "timelyResponsesSumTimes/DriveIn" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/DriveIn")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "DriveIn/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "DriveIn/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+									
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 4 "s")
+									)
+								)
+								
+								(set-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_1e3f04cc_1157614203718_667823_72" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_1e3f04cc_1157614203718_667823_72")
+								
+		)
+	
+		
+		
+		(defun _11_5_1e3f04cc_1157617382125_236454_626_fun "2;tokens._11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[DoJob] Token " (get-named tokenobj "Name") " is in place ")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into transition r:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/r" (+ 1 (get-named #1 "lateResponses/r")))
+												(set-named #1 "lateResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/r")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/r" (+ 1 (get-named #1 "timelyResponses/r")))
+												(set-named #1 "timelyResponsesSumTimes/r" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/r")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace//" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[DoJob] Response from token " (get-named tokenobj "Name") " into place :") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/" (+ 1 (get-named #1 "lateResponses/")))
+												(set-named #1 "lateResponsesSumTimes/" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/")))
+												(print "[DoJob] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/" (+ 1 (get-named #1 "timelyResponses/")))
+												(set-named #1 "timelyResponsesSumTimes/" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/")))
+												(print "[DoJob] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+									
+									)
+								)
+				
+								(let demand (+ 0
+									
+									)
+								)
+								
+								(set-named tokenobj "_11_5_1e3f04cc_1157615604468_587606_470/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_1e3f04cc_1157614203718_667823_72" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_1e3f04cc_1157614203718_667823_72")
+								
+		)
+	
+					(defun GNEnd "2;tokens._11_5_1e3f04cc_1157614203718_667823_72_LocalMemory_Token.obj;;tokens.Global.obj" () ()
+						
+							(print (xml-output #0))
+						
+							(print (xml-output #1))
+						
+					)
+					
+						(defun getParameter "" (tkn param) (distribution)
+;							(print (xml-output tkn))
+							(if (or (= (get-named tkn (+ param "/type")) 0) (= (get-named tkn (+ param "/type")) "explicit"))
+							;--------- explicit parameter
+								(get-named tkn param)
+							(if (= (get-named tkn (+ param "/type")) "manual") 	
+								(begin
+									(print "Please enter the value of " param " :")
+									(read-double)	
+								);begin manual parameter	 
+							;--------- random parameter
+								(begin
+									(let distribution (get-named tkn (+ param "/distribution")))
+									(if (= distribution "uniform")
+										;------------ uniform distribution
+										(random (get-named tkn (+ param "/interval-end")))
+										;---------------------------------
+										(if (= distribution "normal")
+										;------------ normal distribution
+											(random-normal (get-named tkn (+ param "/mean"))
+																		 (get-named tkn (+ param "/variance")))
+										;--------------------------------
+											(if (= distribution "exponential")
+										;------------ exponential distribution	
+											(random-exp (get-named tkn (+ param "/mean")))
+											;---------------------------------
+											(+ 0) 
+											);if exp
+										);if norm
+									);if uniform
+								);begin
+							);if manual
+							);if explicit
+						); defun
+											
+				(defun min "" (a b) ()
+					(if (&lt; a b) a b)
+				)
+				(defun utilize "1;tokens.Global.obj" (tok host t delay) (s)
+					(if (&gt; (+ t delay) (get-named #0 (+ "LastUtilOn/" host)))
+						(begin
+							(set-named #0 (+ "Utilization/" host) (+ (get-named #0  (+ "Utilization/" host)) (min delay (- (+ t delay) (get-named #0 (+ "LastUtilOn/" host))))))
+							(set-named #0 (+ "LastUtilOn/" host) (+ t delay))
+						)
+						0
+					)
+				)
+					(defun convertTime "" (tval units) () 
+						(/ (timeToSec tval units) (timeStep))
+					)
+					(defun unitFactor  "" (units) ()
+						(if (= units "us") 0.000001
+						(if (= units "ms") 0.001
+						(if (= units "s") 1
+						(if (= units "min") 60
+						(if (= units "hour") 3600
+						(if (= units "day") 86400
+							0
+						))))))
+					)
+					(defun timeToSec "" (tval units) ()
+						(* tval (unitFactor units))
+					)
+					(defun secToTime "" (sec units) ()
+						(/ sec (unitFactor units))
+					)
+					(defun timeStep "" () ()
+						(timeToSec 50 "ms")
+					)
+					(defun stepsToTime "" (n units) ()
+						(secToTime (* n (timeStep)) units)
+					)
+					(defun GNTrace "" () ()
+						(print "[DoJob] Step #" time)
+					)
+					(defun index-of "" (el vec) (i)
+						(let i 0)
+						(while (and (&lt; i (get-len vec)) (!= el (get-nth i vec)))
+							(let i (+ i 1))
+						)
+						(+ i 0)
+					)
+					(defun trace "" (param) ()
+						(print param)
+						(+ param 0)
+					)
+					
+					(defun GNInit "1;tokens.ParametersToken.obj" () ()						
+				
+						(def-ch #0)
+					)</gn:functions>
+  <gn:visual-parameters>
+    <gn:metric />
+    <gn:placeRadius>5</gn:placeRadius>
+    <gn:transitionTriangleSize sizeX="10" sizeY="10" />
+  </gn:visual-parameters>
+</gn:gn>

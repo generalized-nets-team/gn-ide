@@ -1,0 +1,34 @@
+<?xml version = "1.0"?>
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "MinimalGN">
+<transitions>
+<transition id = "Z1" positionX="100" positionY="100" sizeY="100">
+<inputs>
+<input ref = "L1">
+<arc>
+<point positionX="50" positionY="150"/>
+<point positionX="100" positionY="150"/>
+</arc>
+</input>
+</inputs>
+<outputs>
+<output ref = "L2">
+<arc>
+<point positionX="100" positionY="150"/>
+<point positionX="150" positionY="150"/>
+</arc>
+</output>
+</outputs>
+<predicates/>
+</transition>
+</transitions>
+<places>
+<place id = "L1" priority="1" positionX="50" positionY="150"/>
+<place id = "L2" priority="1" positionX="150" positionY="150"/>
+</places>
+<tokens>
+<token id="alpha1" host="L1">
+<char name="Default" type="double">1</char>
+</token>
+</tokens>
+<functions/>
+</gn>

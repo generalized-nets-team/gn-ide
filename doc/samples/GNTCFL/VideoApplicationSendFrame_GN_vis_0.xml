@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gn:gn xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:gn="http://www.clbme.bas.bg/GN" xmlns:pregn="http://www.clbme.bas.bg/GN-UML-Intermediate" xmlns:uml="http://schema.omg.org/spec/UML/2.0" xmlns:umlfn="http://www.clbme.bas.bg/UML2GNFunctions" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.clbme.bas.bg/GN GNschema.xsd" name="VideoApplicationSendFrame">
+  <gn:transitions>
+    <gn:transition id="_11_5_3afb06b6_1155040964093_170047_129" name="vs" positionX="350" positionY="160" sizeY="60">
+      <gn:inputs>
+        <gn:input ref="_11_5_3afb06b6_1155041001640_595795_154">
+          <gn:arc>
+            <gn:point positionX="340" positionY="170" />
+            <gn:point positionX="350" positionY="170" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_3afb06b6_1155040964093_170047_129_LocalMemory">
+          <gn:arc>
+            <gn:point positionX="375" positionY="200" />
+            <gn:point positionX="385" positionY="200" />
+            <gn:point positionX="385" positionY="230" />
+            <gn:point positionX="315" positionY="230" />
+            <gn:point positionX="315" positionY="200" />
+            <gn:point positionX="350" positionY="200" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="_11_5_3afb06b6_1155041008937_456743_160">
+          <gn:arc>
+            <gn:point positionX="350" positionY="170" />
+            <gn:point positionX="365" positionY="170" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_3afb06b6_1155040964093_170047_129_LocalMemory">
+          <gn:arc>
+            <gn:point positionX="350" positionY="200" />
+            <gn:point positionX="365" positionY="200" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="_11_5_3afb06b6_1155040964093_170047_129_LocalMemory" output="_11_5_3afb06b6_1155040964093_170047_129_LocalMemory">true</gn:predicate>
+        <gn:predicate input="_11_5_3afb06b6_1155041001640_595795_154" output="_11_5_3afb06b6_1155041008937_456743_160">delay</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="_11_5_3afb06b6_1155040964093_303373_131" name="vp" positionX="480" positionY="190" sizeY="60">
+      <gn:inputs>
+        <gn:input ref="_11_5_3afb06b6_1155041008937_456743_160">
+          <gn:arc>
+            <gn:point positionX="375" positionY="170" />
+            <gn:point positionX="450" positionY="170" />
+            <gn:point positionX="450" positionY="200" />
+            <gn:point positionX="480" positionY="200" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_3afb06b6_1155040964093_303373_131_LocalMemory">
+          <gn:arc>
+            <gn:point positionX="505" positionY="230" />
+            <gn:point positionX="515" positionY="230" />
+            <gn:point positionX="515" positionY="260" />
+            <gn:point positionX="445" positionY="260" />
+            <gn:point positionX="445" positionY="230" />
+            <gn:point positionX="480" positionY="230" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="_11_5_3afb06b6_1155041117734_626168_171">
+          <gn:arc>
+            <gn:point positionX="480" positionY="200" />
+            <gn:point positionX="495" positionY="200" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_3afb06b6_1155040964093_303373_131_LocalMemory">
+          <gn:arc>
+            <gn:point positionX="480" positionY="230" />
+            <gn:point positionX="495" positionY="230" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="_11_5_3afb06b6_1155040964093_303373_131_LocalMemory" output="_11_5_3afb06b6_1155040964093_303373_131_LocalMemory">true</gn:predicate>
+        <gn:predicate input="_11_5_3afb06b6_1155041008937_456743_160" output="_11_5_3afb06b6_1155041117734_626168_171">delay</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="_11_5_3afb06b6_1155040969250_32393_150" name="vw" positionX="80" positionY="100" sizeY="90">
+      <gn:inputs>
+        <gn:input ref="_11_5_3afb06b6_1155041117734_626168_171">
+          <gn:arc>
+            <gn:point positionX="505" positionY="200" />
+            <gn:point positionX="515" positionY="200" />
+            <gn:point positionX="515" positionY="70" />
+            <gn:point positionX="50" positionY="70" />
+            <gn:point positionX="50" positionY="110" />
+            <gn:point positionX="80" positionY="110" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_3afb06b6_1155041130125_346459_182">
+          <gn:arc>
+            <gn:point positionX="105" positionY="170" />
+            <gn:point positionX="115" positionY="170" />
+            <gn:point positionX="115" positionY="200" />
+            <gn:point positionX="45" positionY="200" />
+            <gn:point positionX="45" positionY="170" />
+            <gn:point positionX="80" positionY="170" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="_11_5_3afb06b6_1155040969250_32393_150_LocalMemory">
+          <gn:arc>
+            <gn:point positionX="105" positionY="140" />
+            <gn:point positionX="125" positionY="140" />
+            <gn:point positionX="125" positionY="230" />
+            <gn:point positionX="35" positionY="230" />
+            <gn:point positionX="35" positionY="140" />
+            <gn:point positionX="80" positionY="140" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="_11_5_3afb06b6_1155041130125_346459_182">
+          <gn:arc>
+            <gn:point positionX="80" positionY="170" />
+            <gn:point positionX="95" positionY="170" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_3afb06b6_1155041142296_276655_193">
+          <gn:arc>
+            <gn:point positionX="80" positionY="110" />
+            <gn:point positionX="95" positionY="110" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="_11_5_3afb06b6_1155040969250_32393_150_LocalMemory">
+          <gn:arc>
+            <gn:point positionX="80" positionY="140" />
+            <gn:point positionX="95" positionY="140" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="_11_5_3afb06b6_1155040969250_32393_150_LocalMemory" output="_11_5_3afb06b6_1155040969250_32393_150_LocalMemory">true</gn:predicate>
+        <gn:predicate input="_11_5_3afb06b6_1155041117734_626168_171" output="_11_5_3afb06b6_1155041130125_346459_182">delay</gn:predicate>
+        <gn:predicate input="_11_5_3afb06b6_1155041130125_346459_182" output="_11_5_3afb06b6_1155041142296_276655_193">delay</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="Parameters" name="Parameters" positionX="220" positionY="130" sizeY="30">
+      <gn:inputs>
+        <gn:input ref="ParametersPlace">
+          <gn:arc>
+            <gn:point positionX="245" positionY="140" />
+            <gn:point positionX="255" positionY="140" />
+            <gn:point positionX="255" positionY="170" />
+            <gn:point positionX="185" positionY="170" />
+            <gn:point positionX="185" positionY="140" />
+            <gn:point positionX="220" positionY="140" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="ParametersPlace">
+          <gn:arc>
+            <gn:point positionX="220" positionY="140" />
+            <gn:point positionX="235" positionY="140" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates />
+    </gn:transition>
+  </gn:transitions>
+  <gn:places>
+    <gn:place id="_11_5_3afb06b6_1155040969250_32393_150_LocalMemory" name="Local Memory of vw" char="_11_5_3afb06b6_1155040969250_32393_150_LocalMemory_fun" positionX="100" positionY="140" />
+    <gn:place id="_11_5_3afb06b6_1155040964093_303373_131_LocalMemory" name="Local Memory of vp" char="_11_5_3afb06b6_1155040964093_303373_131_LocalMemory_fun" positionX="500" positionY="230" />
+    <gn:place id="_11_5_3afb06b6_1155040964093_170047_129_LocalMemory" name="Local Memory of vs" char="_11_5_3afb06b6_1155040964093_170047_129_LocalMemory_fun" positionX="370" positionY="200" />
+    <gn:place id="_11_5_3afb06b6_1155041142296_276655_193" name="" char="_11_5_3afb06b6_1155041142296_276655_193_fun" positionX="100" positionY="110" />
+    <gn:place id="_11_5_3afb06b6_1155041130125_346459_182" name="show frame" char="_11_5_3afb06b6_1155041130125_346459_182_fun" positionX="100" positionY="170" />
+    <gn:place id="_11_5_3afb06b6_1155041117734_626168_171" name="receive frame" char="_11_5_3afb06b6_1155041117734_626168_171_fun" positionX="500" positionY="200" />
+    <gn:place id="_11_5_3afb06b6_1155041008937_456743_160" name="send frame" char="_11_5_3afb06b6_1155041008937_456743_160_fun" positionX="370" positionY="170" />
+    <gn:place id="_11_5_3afb06b6_1155041001640_595795_154" name="Workload" char="_11_5_3afb06b6_1155041001640_595795_154_fun" positionX="330" positionY="170" />
+    <gn:place id="ParametersPlace" name="ParametersPlace" positionX="240" positionY="140" />
+  </gn:places>
+  <gn:tokens>
+    <gn:token id="_11_5_3afb06b6_1155040969250_32393_150_LocalMemory_Token" name="Local Memory of vw Token" host="_11_5_3afb06b6_1155040969250_32393_150_LocalMemory">
+      <gn:char name="Default" type="double">1</gn:char>
+      <gn:char name="Name" type="string">Local Memory of vw Token</gn:char>
+    </gn:token>
+    <gn:token id="_11_5_3afb06b6_1155040964093_303373_131_LocalMemory_Token" name="Local Memory of vp Token" host="_11_5_3afb06b6_1155040964093_303373_131_LocalMemory">
+      <gn:char name="Default" type="double">1</gn:char>
+      <gn:char name="Name" type="string">Local Memory of vp Token</gn:char>
+    </gn:token>
+    <gn:token id="_11_5_3afb06b6_1155040964093_170047_129_LocalMemory_Token" name="Local Memory of vs Token" host="_11_5_3afb06b6_1155040964093_170047_129_LocalMemory">
+      <gn:char name="Default" type="double">1</gn:char>
+      <gn:char name="Name" type="string">Local Memory of vs Token</gn:char>
+    </gn:token>
+    <gn:token id="ParametersToken" host="ParametersPlace" />
+  </gn:tokens>
+  <gn:functions>
+						(defun delay "" () ()
+						  (&gt;= time (get-named tokenobj "_11_5_3afb06b6_1155040826109_270581_121/waitUntil"))
+						)
+					
+					(defun GNInit "1;tokens.ParametersToken.obj" () ()						
+				
+						(def-ch #0)
+					)
+						(defun getParameter "" (tkn param) (distribution)
+;							(print (xml-output tkn))
+							(if (or (= (get-named tkn (+ param "/type")) 0) (= (get-named tkn (+ param "/type")) "explicit"))
+							;--------- explicit parameter
+								(get-named tkn param)
+							(if (= (get-named tkn (+ param "/type")) "manual") 	
+								(begin
+									(print "Please enter the value of " param " :")
+									(read-double)	
+								);begin manual parameter	 
+							;--------- random parameter
+								(begin
+									(let distribution (get-named tkn (+ param "/distribution")))
+									(if (= distribution "uniform")
+										;------------ uniform distribution
+										(random (get-named tkn (+ param "/interval-end")))
+										;---------------------------------
+										(if (= distribution "normal")
+										;------------ normal distribution
+											(random-normal (get-named tkn (+ param "/mean"))
+																		 (get-named tkn (+ param "/variance")))
+										;--------------------------------
+											(if (= distribution "exponential")
+										;------------ exponential distribution	
+											(random-exp (get-named tkn (+ param "/mean")))
+											;---------------------------------
+											(+ 0) 
+											);if exp
+										);if norm
+									);if uniform
+								);begin
+							);if manual
+							);if explicit
+						); defun
+											
+				(defun min "" (a b) ()
+					(if (&lt; a b) a b)
+				)
+				(defun utilize "1;tokens.Global.obj" (tok host t delay) (s)
+					(if (&gt; (+ t delay) (get-named #0 (+ "LastUtilOn/" host)))
+						(begin
+							(set-named #0 (+ "Utilization/" host) (+ (get-named #0  (+ "Utilization/" host)) (min delay (- (+ t delay) (get-named #0 (+ "LastUtilOn/" host))))))
+							(set-named #0 (+ "LastUtilOn/" host) (+ t delay))
+						)
+						0
+					)
+				)
+					(defun convertTime "" (tval units) () 
+						(/ (timeToSec tval units) (timeStep))
+					)
+					(defun unitFactor  "" (units) ()
+						(if (= units "us") 0.000001
+						(if (= units "ms") 0.001
+						(if (= units "s") 1
+						(if (= units "min") 60
+						(if (= units "hour") 3600
+						(if (= units "day") 86400
+							0
+						))))))
+					)
+					(defun timeToSec "" (tval units) ()
+						(* tval (unitFactor units))
+					)
+					(defun secToTime "" (sec units) ()
+						(/ sec (unitFactor units))
+					)
+					(defun timeStep "" () ()
+						; uncomment this line for LegoRobotActivity.xml
+;						(timeToSec 50 "ms")
+						; uncomment this line for VideoApplication*.xml
+						(timeToSec 0.1 "ms")
+					)
+					(defun stepsToTime "" (n units) ()
+						(secToTime (* n (timeStep)) units)
+					)
+					(defun GNTrace "" () ()
+						(print "[VideoApplicationSendFrame] Step #" time)
+					)
+					(defun index-of "" (el vec) (i)
+						(let i 0)
+						(while (and (&lt; i (get-len vec)) (!= el (get-nth i vec)))
+							(let i (+ i 1))
+						)
+						(+ i 0)
+					)
+					(defun trace "" (param) ()
+						(print param)
+						(+ param 0)
+					)
+					
+					(defun GNEnd "4;tokens._11_5_3afb06b6_1155040964093_170047_129_LocalMemory_Token.obj;tokens._11_5_3afb06b6_1155040964093_303373_131_LocalMemory_Token.obj;tokens._11_5_3afb06b6_1155040969250_32393_150_LocalMemory_Token.obj;;tokens.Global.obj" () ()
+						
+							(print (xml-output #0))
+						
+							(print (xml-output #1))
+						
+							(print (xml-output #2))
+						
+							(print (xml-output #3))
+						
+					)
+					
+		
+		
+		(defun _11_5_3afb06b6_1155041001640_595795_154_fun "1;tokens.Global.obj;" () ()
+		
+			
+		)
+	
+		
+		
+		(defun _11_5_3afb06b6_1155041008937_456743_160_fun "2;tokens._11_5_3afb06b6_1155040964093_170047_129_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[VideoApplicationSendFrame] Token " (get-named tokenobj "Name") " is in place send frame")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[VideoApplicationSendFrame] Response from token " (get-named tokenobj "Name") " into transition vs:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/vs" (+ 1 (get-named #1 "lateResponses/vs")))
+												(set-named #1 "lateResponsesSumTimes/vs" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/vs")))
+												(print "[VideoApplicationSendFrame] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/vs" (+ 1 (get-named #1 "timelyResponses/vs")))
+												(set-named #1 "timelyResponsesSumTimes/vs" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/vs")))
+												(print "[VideoApplicationSendFrame] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/send frame/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[VideoApplicationSendFrame] Response from token " (get-named tokenobj "Name") " into place send frame:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/send frame" (+ 1 (get-named #1 "lateResponses/send frame")))
+												(set-named #1 "lateResponsesSumTimes/send frame" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/send frame")))
+												(print "[VideoApplicationSendFrame] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/send frame" (+ 1 (get-named #1 "timelyResponses/send frame")))
+												(set-named #1 "timelyResponsesSumTimes/send frame" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/send frame")))
+												(print "[VideoApplicationSendFrame] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "send frame/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "send frame/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+												
+			(get-nth
+				(index-of
+					(get-named tokenobj "Host")
+					["_11_5_3afb06b6_1155469532000_184856_8" ]
+				)
+				(begin
+						(let s [nx 2 0])
+						
+						(set-nth 0 (+ 0 ) s)
+						
+						s
+				)							
+			)
+			
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 10 "ms")(convertTime 40 "us")
+									)
+								)
+								
+								(set-named tokenobj "_11_5_3afb06b6_1155040826109_270581_121/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_3afb06b6_1155469532000_184856_8" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_3afb06b6_1155469532000_184856_8")
+								
+					(set-named #1 "ExtOp_filesys/_11_5_3afb06b6_1155469532000_184856_8"
+						(+
+							(get-named #1 "ExtOp_filesys/_11_5_3afb06b6_1155469532000_184856_8")
+							12
+						)
+					)
+			
+					(set-named #1 "ExtOp_network/_11_5_3afb06b6_1155469532000_184856_8"
+						(+
+							(get-named #1 "ExtOp_network/_11_5_3afb06b6_1155469532000_184856_8")
+							65
+						)
+					)
+			
+		)
+	
+		
+		
+		(defun _11_5_3afb06b6_1155041117734_626168_171_fun "2;tokens._11_5_3afb06b6_1155040964093_303373_131_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[VideoApplicationSendFrame] Token " (get-named tokenobj "Name") " is in place receive frame")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[VideoApplicationSendFrame] Response from token " (get-named tokenobj "Name") " into transition vp:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/vp" (+ 1 (get-named #1 "lateResponses/vp")))
+												(set-named #1 "lateResponsesSumTimes/vp" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/vp")))
+												(print "[VideoApplicationSendFrame] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/vp" (+ 1 (get-named #1 "timelyResponses/vp")))
+												(set-named #1 "timelyResponsesSumTimes/vp" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/vp")))
+												(print "[VideoApplicationSendFrame] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/receive frame/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[VideoApplicationSendFrame] Response from token " (get-named tokenobj "Name") " into place receive frame:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/receive frame" (+ 1 (get-named #1 "lateResponses/receive frame")))
+												(set-named #1 "lateResponsesSumTimes/receive frame" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/receive frame")))
+												(print "[VideoApplicationSendFrame] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/receive frame" (+ 1 (get-named #1 "timelyResponses/receive frame")))
+												(set-named #1 "timelyResponsesSumTimes/receive frame" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/receive frame")))
+												(print "[VideoApplicationSendFrame] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "receive frame/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "receive frame/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+												
+			(get-nth
+				(index-of
+					(get-named tokenobj "Host")
+					["_11_5_3afb06b6_1155469532000_59861_6" "_11_5_3afb06b6_1155469532000_184856_8" ]
+				)
+				(begin
+						(let s [nx 3 0])
+						
+						(set-nth 0 (+ 0 ) s)
+						
+						(set-nth 1 (+ 0 (random-exp (/ 1 (convertTime 10 "ms")))) s)
+						
+						s
+				)							
+			)
+			
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 15 "ms")
+								(random-normal 0 (convertTime 10 "ms"))
+							(convertTime 40 "us")
+									)
+								)
+								
+								(set-named tokenobj "_11_5_3afb06b6_1155040826109_270581_121/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_3afb06b6_1155469532000_59861_6" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_3afb06b6_1155469532000_59861_6")
+								
+		)
+	
+		
+		
+		(defun _11_5_3afb06b6_1155041130125_346459_182_fun "2;tokens._11_5_3afb06b6_1155040969250_32393_150_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[VideoApplicationSendFrame] Token " (get-named tokenobj "Name") " is in place show frame")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[VideoApplicationSendFrame] Response from token " (get-named tokenobj "Name") " into transition vw:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/vw" (+ 1 (get-named #1 "lateResponses/vw")))
+												(set-named #1 "lateResponsesSumTimes/vw" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/vw")))
+												(print "[VideoApplicationSendFrame] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/vw" (+ 1 (get-named #1 "timelyResponses/vw")))
+												(set-named #1 "timelyResponsesSumTimes/vw" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/vw")))
+												(print "[VideoApplicationSendFrame] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace/show frame/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[VideoApplicationSendFrame] Response from token " (get-named tokenobj "Name") " into place show frame:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/show frame" (+ 1 (get-named #1 "lateResponses/show frame")))
+												(set-named #1 "lateResponsesSumTimes/show frame" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/show frame")))
+												(print "[VideoApplicationSendFrame] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/show frame" (+ 1 (get-named #1 "timelyResponses/show frame")))
+												(set-named #1 "timelyResponsesSumTimes/show frame" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/show frame")))
+												(print "[VideoApplicationSendFrame] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+										
+										(print "[VideoApplicationSendFrame] Repeat interval in show frame from " (get-named tokenobj "Name") " at latest step " (+ time (convertTime 30 "ms")))
+										(set-named #0 s  (+ time (convertTime 30 "ms")))
+										(set-named #0 (+ "startTime/" s) time)
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "show frame/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "show frame/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+												
+			(get-nth
+				(index-of
+					(get-named tokenobj "Host")
+					["_11_5_3afb06b6_1155469532000_59861_6" ]
+				)
+				(begin
+						(let s [nx 2 0])
+						
+						(set-nth 0 (+ 0 ) s)
+						
+						s
+				)							
+			)
+			
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 40 "us")
+									)
+								)
+								
+								(set-named tokenobj "_11_5_3afb06b6_1155040826109_270581_121/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_3afb06b6_1155469532000_59861_6" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_3afb06b6_1155469532000_59861_6")
+								
+		)
+	
+		
+		
+		(defun _11_5_3afb06b6_1155041142296_276655_193_fun "2;tokens._11_5_3afb06b6_1155040969250_32393_150_LocalMemory_Token.obj;tokens.Global.obj;" () (s delay demand )
+		
+			
+				
+								(print "[VideoApplicationSendFrame] Token " (get-named tokenobj "Name") " is in place ")
+								(let s (+ "nextVisitTransition/" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+													
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[VideoApplicationSendFrame] Response from token " (get-named tokenobj "Name") " into transition vw:") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/vw" (+ 1 (get-named #1 "lateResponses/vw")))
+												(set-named #1 "lateResponsesSumTimes/vw" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "lateResponsesSumTimes/vw")))
+												(print "[VideoApplicationSendFrame] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/vw" (+ 1 (get-named #1 "timelyResponses/vw")))
+												(set-named #1 "timelyResponsesSumTimes/vw" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/vw")))
+												(print "[VideoApplicationSendFrame] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+				
+								(let s (+ "nextVisitPlace//" (get-named tokenobj "Name") "/" (get-named tokenobj "Iteration")))
+				
+								
+								(if (&gt; (get-named #0 s) 0)
+									(begin
+										(print "[VideoApplicationSendFrame] Response from token " (get-named tokenobj "Name") " into place :") 					
+										(if (&lt; (get-named #0 s) time)						
+											(begin
+											
+												(set-named #1 "lateResponses/" (+ 1 (get-named #1 "lateResponses/")))
+												(set-named #1 "lateResponsesSumTimes/" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms") (get-named #1 "lateResponsesSumTimes/")))
+												(print "[VideoApplicationSendFrame] LATE! (expected at " (get-named #0 s) ") ")
+											)
+											(begin
+											
+												(set-named #1 "timelyResponses/" (+ 1 (get-named #1 "timelyResponses/")))
+												(set-named #1 "timelyResponsesSumTimes/" (+ (stepsToTime (- time (get-named #0 (+ "startTime/" s))) "ms")  (get-named #1 "timelyResponsesSumTimes/")))
+												(print "[VideoApplicationSendFrame] on time")
+											)
+										)
+										(set-named #0 s 0)
+									)
+									(begin
+									
+																	
+										
+										0
+									)
+								)
+								
+								
+								
+								(set-named tokenobj  
+									(+ "/count/" (get-named tokenobj "Iteration"))
+								 (+ 1 (get-named tokenobj 
+									(+ "/count/" (get-named tokenobj "Iteration"))
+								)))
+								(let delay (+ 0
+												
+			(get-nth
+				(index-of
+					(get-named tokenobj "Host")
+					["_11_5_3afb06b6_1155469532000_59861_6" ]
+				)
+				(begin
+						(let s [nx 2 0])
+						
+						(set-nth 0 (+ 0 ) s)
+						
+						s
+				)							
+			)
+			
+									)
+								)
+				
+								(let demand (+ 0
+									(convertTime 40 "us")
+									)
+								)
+								
+								(set-named tokenobj "_11_5_3afb06b6_1155040826109_270581_121/waitUntil" (+ time delay demand))
+								
+								(utilize (get-named tokenobj "Name") "_11_5_3afb06b6_1155469532000_59861_6" time demand)
+								
+								(set-named tokenobj "Host" "_11_5_3afb06b6_1155469532000_59861_6")
+								
+		)
+	
+		
+		
+		(defun _11_5_3afb06b6_1155040964093_170047_129_LocalMemory_fun "1;tokens.Global.obj;" () ()
+		
+			
+		)
+	
+		
+		
+		(defun _11_5_3afb06b6_1155040964093_303373_131_LocalMemory_fun "1;tokens.Global.obj;" () ()
+		
+			
+		)
+	
+		
+		
+		(defun _11_5_3afb06b6_1155040969250_32393_150_LocalMemory_fun "1;tokens.Global.obj;" () ()
+		
+			
+		)
+	</gn:functions>
+  <gn:visual-parameters>
+    <gn:metric />
+    <gn:placeRadius>10</gn:placeRadius>
+    <gn:transitionTriangleSize sizeX="10" sizeY="10" />
+  </gn:visual-parameters>
+</gn:gn>

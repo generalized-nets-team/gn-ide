@@ -1,0 +1,88 @@
+
+; PRIMITIVES
+
+(defun print_array_by_place ""(place token_name characteristic_name)(array size counter)
+  (let array (get-named (gettokenbyname place token_name) characteristic_name))	
+  (let size (get-len array))
+  (print "size of array:")
+  (print size)
+  (let size (- size 1))
+  (print "Sadarjanieto na masiva " characteristic_name )
+  (for counter 0 size 1
+   (begin
+      (print (get-nth counter array))
+    )
+  )
+  (print "Razmer na masiva " characteristic_name )
+  (print size)
+)
+
+(defun print_array_by_token ""(tobj characteristic_name)(array size counter)
+  (let array (get-named tobj characteristic_name))	
+  (let size (get-len array))
+  (print "size of array:")
+  (print size)
+  (let size (- size 1))
+  (print "Sadarjanieto na masiva " characteristic_name )
+  (for counter 0 size 1
+   (begin
+      (print (get-nth counter array))
+    )
+  )
+  (print "Razmer na masiva " characteristic_name )
+  (print size)
+)
+
+; Primitive za izvlichane na stoinost ot matrica 
+; Vhodni parametri
+; 	x - stoinost na reda
+; 	y - stoinost na kolonata
+; 	matrix_char_name - ime na matricata
+;	value - izvlechena stoinost
+
+(defun get_matrix_value_x_y ""(tobj matrix_char_name x y )( matrix vector value )
+  (let matrix (get-named tobj matrix_char_name))
+  (let vector (get-nth x matrix))
+  (let value (get-nth y vector))
+)
+
+; Primitive za prisvoiavane na stoinost ot matrica 
+; Vhodni parametri
+; 	x - stoinost na reda
+; 	y - stoinost na kolonata
+; 	matrix_char_name - ime na matricata
+;	value - ustanovena stoinost
+
+(defun set_matrix_value_x_y ""(tobj matrix_char_name x y value)( matrix vector)
+  (let matrix (get-named tobj matrix_char_name))
+  (let vector (get-nth x matrix))
+  (set-nth y value vector)
+  (set-nth x vector matrix)
+  (set-named tobj matrix_char_name matrix)
+)
+
+; Primitive za izvlichane na red ot matrica 
+; Vhodni parametri
+; 	x - stoinost na reda
+; 	matrix_char_name - ime na matricata
+;	value - izvlechena stoinost
+;	tobj - iadro ot koeto izvlicham matricata 
+(defun get_matrix_s_row ""(tobj matrix_char_name x )( matrix value vector_row )
+  (let matrix (get-named tobj matrix_char_name))
+  (let vector_row (get-nth x matrix)) 
+)
+
+; Primitive za izvlichane na stoinost ot vector 
+; Vhodni parametri
+; 	x - stoinost na index-a 
+(defun get_vector_value_x ""(tobj vector_char_name x )( vector value )
+  (get-nth x (get-named tobj vector_char_name))
+)
+
+; Primitive za ustanoviavane na stoinost na vector 
+; Vhodni parametri
+; 	x - stoinost na index-a 
+(defun set_vector_value_x ""(tobj vector_char_name x value )( vector )
+  (let vector (get-named tobj vector_char_name))	
+  (set-nth x value vector)
+)

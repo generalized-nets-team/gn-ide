@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+	codebase="http://mitex.hit.bg/genedit"
+	href="genedit.jnlp">
+	<information>
+  		<title>Genedit</title>
+  		<vendor>Dimitar Dimitrov</vendor>
+  		<description>Generalized Nets IDE</description>
+		<offline-allowed/>
+	</information>
+
+	<security>
+		<all-permissions />
+	</security>
+	
+	<resources>
+		<j2se version="1.5+" />
+		<jar href="Genedit.jar" main="true" />
+	</resources>
+
+	<resources os="Windows" arch="x86">
+		<j2se version="1.4+" />
+		<jar href="swt.jar" />
+	</resources>
+	
+	<!-- TODO: other OS - http://www.eclipse.org/swt/ -->
+	
+	<application-desc main-class="net.generalised.genedit.main.Main" />
+</jnlp>

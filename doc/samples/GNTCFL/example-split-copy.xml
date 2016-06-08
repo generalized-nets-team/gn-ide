@@ -1,0 +1,54 @@
+<?xml version = "1.0"?>
+
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "example-split-copy" time = "256">
+     <transitions>
+      <transition id = "T">
+         <inputs>
+            <input ref = "LStart"/>
+            <input ref = "LStep"/>
+         </inputs>
+         <outputs>
+            <output ref = "LEnd"/>
+            <output ref = "LStep"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LStart" output = "LStep">true</predicate>
+            <predicate input = "LStep" output = "LEnd">true</predicate>
+         </predicates>
+      </transition>
+   </transitions>
+   <places>
+      <place id = "LStart" priority = "1" char = "CharLStart"/>
+      <place id = "LStep" priority = "1" char = "CharLStep"/>
+      <place id = "LEnd" priority = "1" char = "CharLEnd"/>
+   </places>
+   <tokens>
+      <token id = "Tkn" host = "LStart">
+         <char name = "Default" type = "double">0</char>
+         <char name = "array" type = "vector">[ 1 2 3]</char>
+         <char name = "testDouble" type = "double">5</char>
+      </token>
+	</tokens>
+   <functions>; CHAR FUNCTIONS
+; ----------
+
+(defun CharLStart  "" () ()
+ 
+   (print "start")
+  
+)
+
+(defun CharLStep  "1;places.LEnd.obj" () ()
+ 
+   (print "step")
+   (split-copy tokenobj "newToken" #0 "newChar" 5 "testDouble" 6)
+   )
+ 
+
+(defun CharLEnd  "" () ()
+	 (print (xml-output tokenobj))
+)
+
+
+</functions>
+</gn>

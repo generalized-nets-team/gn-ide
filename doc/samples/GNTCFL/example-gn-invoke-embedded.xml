@@ -1,0 +1,63 @@
+<?xml version = "1.0"?>
+
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "gn-invoke-example-embedded" time = "256">
+     <transitions>
+
+      <transition id = "T1">
+         <inputs>
+            <input ref = "LStart"/>
+         </inputs>
+         <outputs>
+            <output ref = "LStep"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LStart" output = "LStep">true</predicate>
+         </predicates>
+      </transition>
+
+      <transition id = "T2">
+         <inputs>
+            <input ref = "LStep"/>
+         </inputs>
+         <outputs>
+            <output ref = "LExit"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LStep" output = "LExit">true</predicate>
+         </predicates>
+      </transition>
+   </transitions>
+
+
+   <places>
+      <place id = "LStart" priority = "1" char = "CharStart"/>
+      <place id = "LStep" priority = "1" char = "CharStep"/>
+      <place id = "LExit" priority = "1" char = "CharExit"/>
+   </places>
+   
+   <tokens>
+
+	</tokens>
+   
+   <functions>; CHAR FUNCTIONS
+; ----------
+
+
+(defun CharStart "0;" () ()
+  
+  (set-named tokenobj "Default" (+ (get-named tokenobj "Default") 1))
+  (print "START:Token char:" (get-named tokenobj "Default") "
+" ))
+
+(defun CharStep "0;" () ()
+  (set-named tokenobj "Default" (+ (get-named tokenobj "Default") 1))
+  (print "STEP:Token char:" (get-named tokenobj "Default") "
+" ))
+
+(defun CharExit "0;" () ()
+  (set-named tokenobj "Default"  (+ (get-named tokenobj "Default") 1))
+  (print "END:Token char:" (get-named tokenobj "Default") "
+" ))
+
+</functions>
+</gn>

@@ -1,0 +1,57 @@
+<?xml version = "1.0"?>
+
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "example-gn-invoke-tokenchar" time = "256">
+     <transitions>
+      <transition id = "T">
+         <inputs>
+            <input ref = "LStart"/>
+            <input ref = "LInvoke"/>
+            <input ref = "LMemory"/>
+         </inputs>
+         <outputs>
+            <output ref = "LInvoke"/>
+            <output ref = "LMemory"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LStart" output = "LInvoke">true</predicate>
+            <predicate input = "LInvoke" output = "LInvoke">true</predicate>
+            <predicate input = "LMemory" output = "LMemory">true</predicate>
+         </predicates>
+      </transition>
+   </transitions>
+   <places>
+      <place id = "LStart" priority = "1" char = "CharLStart"/>
+      <place id = "LInvoke" priority = "1" char = "CharLInvoke"/>
+      <place id = "LMemory" priority = "10" char = "CharLMemory"/>
+   </places>
+   <tokens>
+      <token id = "Tkn" host = "LStart">
+         <char name = "Default" type = "double">0</char>
+      </token>
+      <token id = "TMem" host = "LMemory">
+         <char name = "Default" type = "double">0</char>
+      </token>
+	</tokens>
+   <functions>; CHAR FUNCTIONS
+; ----------
+
+
+(defun CharLInvoke  "1;tokens.TMem.obj" () ()
+   (gn-invoke (get-named #0 "gn-embedded") tokenobj "LStart" ))
+ 
+
+(defun CharLStart "1;tokens.Tkn.obj" () ()
+  (print "Starting...
+  "))
+
+(defun CharLMemory "0;" () ()
+  
+  (if (= (get-named tokenobj "Default") 0)
+      (begin (set-named tokenobj "Default" 1)
+      			  (set-named tokenobj "gn-embedded" (gn-embed "../examples/example-gn-invoke-embedded.xml")))
+      (+ 0 ))
+  
+  )
+
+</functions>
+</gn>

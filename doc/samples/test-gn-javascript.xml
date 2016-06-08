@@ -1,0 +1,33 @@
+<?xml version = "1.0"?>
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "MinimalGN">
+<transitions>
+<transition id = "Z1">
+<inputs>
+<input ref = "L1" />
+</inputs>
+<outputs>
+<output ref = "L2" />
+</outputs>
+<predicates/>
+</transition>
+</transitions>
+<places>
+<place id = "L1" />
+<place id = "L2" />
+</places>
+<tokens>
+<token id="alpha1" host="L1">
+<char name="Default" type="double">1</char>
+</token>
+</tokens>
+<functions>
+// test...
+function getTheNull() {
+return null;
+}
+
+function moveThis(var there) {
+	this.move(there);
+}
+</functions>
+</gn>

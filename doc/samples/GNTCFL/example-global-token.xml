@@ -1,0 +1,39 @@
+<?xml version = "1.0"?>
+
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "example-global-token" time = "256">
+     <transitions>
+      <transition id = "T">
+         <inputs>
+            <input ref = "LCycle"/>
+         </inputs>
+         <outputs>
+            <output ref = "LCycle"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LCycle" output = "LCycle">true</predicate>
+         </predicates>
+      </transition>
+   </transitions>
+   <places>
+      <place id = "LCycle" priority = "1" char = "CharUseGlobal"/>
+   </places>
+   <tokens>
+      <token id = "Tkn" host = "LCycle">
+         <char name = "Default" type = "double">0</char>
+      </token>
+	</tokens>
+   <functions>; CHAR FUNCTIONS
+; ----------
+
+
+(defun CharUseGlobal "1;tokens.Global.obj" () ()
+
+	(set-named #0 "Default" (+ (get-named #0 "Default" ) 1))
+;	(print "char = " (get-named #0 "Default") "
+; ")
+	(print (xml-output-token #0))
+
+)
+
+</functions>
+</gn>

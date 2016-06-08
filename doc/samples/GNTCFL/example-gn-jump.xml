@@ -1,0 +1,120 @@
+<?xml version = "1.0"?>
+
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "example-gn-jump" time = "256">
+     <transitions>
+      <transition id = "T">
+         <inputs>
+            <input ref = "LStart"/>
+            <input ref = "LJump"/>
+            <input ref = "LEnd"/>
+            <input ref = "LCycle"/>
+            <input ref = "LJumpCycle"/>
+         </inputs>
+         <outputs>
+            <output ref = "LJump"/>
+            <output ref = "LEnd"/>
+            <output ref = "LCycle"/>
+            <output ref = "LStart"/>
+            <output ref = "LJumpCycle"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LStart" output = "LJump">false</predicate>
+            <predicate input = "LJump" output = "LEnd">true</predicate>
+            <predicate input = "LEnd" output = "LStart">true</predicate>
+            <predicate input = "LCycle" output = "LCycle">true</predicate>
+            <predicate input = "LJumpCycle" output = "LJumpCycle">true</predicate>
+         </predicates>
+      </transition>
+   </transitions>
+   <places>
+      <place id = "LStart" priority = "1" char = "CharLStart"/>
+      <place id = "LJumpCycle" priority = "1" char = "CJumpCycle"/>
+      <place id = "LJump" priority = "1" char = "CharLJump"/>
+      <place id = "LEnd" priority = "1" char = "CharLEnd"/>
+      <place id = "LCycle" priority = "10" char = "CharLCycle"/>
+    </places>
+   <tokens>
+      <token id = "Tkn" host = "LStart">
+         <char name = "Default" type = "double">0</char>
+      </token>
+      <token id = "TknCycle" host = "LCycle">
+         <char name = "Default" type = "double">0</char>
+         <char name = "myName" type = "string">I am the first cycling token</char>
+      </token>
+      <token id = "TknJumpCycle" host = "LJumpCycle">
+         <char name = "Default" type = "double">0</char>
+         <char name = "myName" type = "string">I am the second cycling token</char>
+      </token>
+	</tokens>
+   <functions>; CHAR FUNCTIONS
+; ----------
+
+
+
+
+(defun CharLStart  "1;tokens.TknCycle.obj" () ()
+
+	(print "START") (newline)
+
+	(set-named tokenobj "Default" ( + (get-named tokenobj "Default") 1))
+	
+	(set-named #0 "embedded-gn" (gn-embed "..\examples\example-gn-jump-embedded.xml"))
+		        	        
+)
+ 	
+(defun CharLJump  "1;tokens.TknCycle.obj" () ()
+
+	(print "***Jump") (newline)
+	
+	(set-named tokenobj "Default" ( + (get-named tokenobj "Default") 1))
+	
+;	(gn-jump (get-named #0 "embedded-gn")
+;				    tokenobj
+;				    "LEnter" )
+	
+	(print "***Jumped...") (newline)
+
+	)
+
+
+(defun CJumpCycle  "1;tokens.TknCycle.obj" () ()
+
+	(print "***JumpCycle") (newline)
+	
+	(set-named tokenobj "Default" ( + (get-named tokenobj "Default") 1))
+	
+	(gn-jump (get-named #0 "embedded-gn")
+				    tokenobj
+				    "LEnter" )
+	
+	(print "***Jumped...") (newline)
+
+	)
+
+
+(defun CharLEnd  "" () ()
+
+	(print "***End") (newline)
+
+	(set-named tokenobj "Default" ( + (get-named tokenobj "Default") 1))
+
+
+	)
+
+(defun CharLCycle  "2;tokens.Tkn.obj;tokens.TknJumpCycle.obj" () ()
+
+	(print "***Cycle") (newline)
+
+	(if (> (get-named #0 "Default") 0)
+	    (begin
+	    	(gn-step (get-named tokenobj "embedded-gn")) 
+	    ; 	(print (xml-output-token #0) )
+	     	(print (xml-output-token #1) )
+	      ;(print (xml-output-token tokenobj))
+	    )
+	    (+ 0))
+	    
+	)
+
+</functions>
+</gn>

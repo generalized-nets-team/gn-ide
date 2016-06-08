@@ -1,0 +1,11 @@
+Distribution package should contain:
+
+Genedit.jar
+swt*.jar
+gdiplus.dll
+MatLabAdapter.exe
+run.bat
+run.sh
+GNSchema.xsd
+MatLabAdapter_readme.txt
+

@@ -1,0 +1,69 @@
+<?xml version = "1.0"?>
+
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "example-gn-jump-embedded" time = "256">
+     <transitions>
+
+      <transition id = "T1">
+         <inputs>
+            <input ref = "LEnter"/>
+         </inputs>
+         <outputs>
+            <output ref = "LSomeStep"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LEnter" output = "LSomeStep">true</predicate>
+         </predicates>
+      </transition>
+
+      <transition id = "T2">
+         <inputs>
+            <input ref = "LSomeStep"/>
+         </inputs>
+         <outputs>
+            <output ref = "LJumpOut"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LSomeStep" output = "LJumpOut">true</predicate>
+         </predicates>
+      </transition>
+
+   </transitions>
+
+
+   <places>
+      <place id = "LEnter" priority = "1" char = "CLEnter"/>
+      <place id = "LSomeStep" priority = "1" char = "CSomeStep"/>
+      <place id = "LJumpOut" priority = "1" char = "CLJumpOut"/>
+   </places>
+   
+   <tokens>
+
+	</tokens>
+   
+   <functions>; CHAR FUNCTIONS
+; ----------
+
+
+(defun CLEnter "" () ()
+ 
+  (print "***Enter") (newline)
+ 
+;  (print  (xml-output-token tokenobj)  ))
+	)
+
+(defun CSomeStep "" () ()
+ 
+   (print "***SomeStep") (newline)
+ 
+  ;(print  (xml-output-token tokenobj)  ))
+  )
+
+(defun CLJumpOut "" () ()
+    
+   (print "***JumpOut") (newline)
+  
+  ;(print  (xml-output-token tokenobj)  ))
+  )
+
+</functions>
+</gn>

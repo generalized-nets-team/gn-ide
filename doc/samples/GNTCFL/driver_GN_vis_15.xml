@@ -1,0 +1,1287 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<gn:gn xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:gn="http://www.clbme.bas.bg/GN" xmlns:pregn="http://www.clbme.bas.bg/GN-UML-Intermediate" xmlns:uml="http://schema.omg.org/spec/UML/2.0" xmlns:umlfn="http://www.clbme.bas.bg/UML2GNFunctions" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.clbme.bas.bg/GN c:\work\dresden\xsl\GNschema.xsd" name="driver">
+  <gn:transitions>
+    <gn:transition id="Deactivated_Transition" name="Deactivated" positionX="220" positionY="140" sizeY="180">
+      <gn:inputs>
+        <gn:input ref="SYMB93_">
+          <gn:arc>
+            <gn:point positionX="210" positionY="150" />
+            <gn:point positionX="220" positionY="150" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB1810_SYMB240">
+          <gn:arc>
+            <gn:point positionX="245" positionY="270" />
+            <gn:point positionX="265" positionY="270" />
+            <gn:point positionX="265" positionY="360" />
+            <gn:point positionX="175" positionY="360" />
+            <gn:point positionX="175" positionY="270" />
+            <gn:point positionX="220" positionY="270" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB136_SYMB99">
+          <gn:arc>
+            <gn:point positionX="245" positionY="300" />
+            <gn:point positionX="255" positionY="300" />
+            <gn:point positionX="255" positionY="330" />
+            <gn:point positionX="185" positionY="330" />
+            <gn:point positionX="185" positionY="300" />
+            <gn:point positionX="220" positionY="300" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB230_SYMB141">
+          <gn:arc>
+            <gn:point positionX="955" positionY="500" />
+            <gn:point positionX="975" positionY="500" />
+            <gn:point positionX="975" positionY="100" />
+            <gn:point positionX="180" positionY="100" />
+            <gn:point positionX="180" positionY="180" />
+            <gn:point positionX="220" positionY="180" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB299_SYMB294">
+          <gn:arc>
+            <gn:point positionX="105" positionY="170" />
+            <gn:point positionX="160" positionY="170" />
+            <gn:point positionX="160" positionY="240" />
+            <gn:point positionX="220" positionY="240" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB299_SYMB295">
+          <gn:arc>
+            <gn:point positionX="105" positionY="140" />
+            <gn:point positionX="170" positionY="140" />
+            <gn:point positionX="170" positionY="210" />
+            <gn:point positionX="220" positionY="210" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="SYMB1810_SYMB240">
+          <gn:arc>
+            <gn:point positionX="220" positionY="270" />
+            <gn:point positionX="235" positionY="270" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB136_SYMB99">
+          <gn:arc>
+            <gn:point positionX="220" positionY="300" />
+            <gn:point positionX="235" positionY="300" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB135_SYMB99">
+          <gn:arc>
+            <gn:point positionX="220" positionY="240" />
+            <gn:point positionX="235" positionY="240" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="SYMB299_SYMB295" output="SYMB135_SYMB99">W_Deactivated_3</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB294" output="SYMB135_SYMB99">W_Deactivated_3</gn:predicate>
+        <gn:predicate input="SYMB230_SYMB141" output="SYMB135_SYMB99">W_Deactivated_3</gn:predicate>
+        <gn:predicate input="SYMB136_SYMB99" output="SYMB135_SYMB99">W_Deactivated_3</gn:predicate>
+        <gn:predicate input="SYMB1810_SYMB240" output="SYMB135_SYMB99">W_Deactivated_3</gn:predicate>
+        <gn:predicate input="SYMB93_" output="SYMB135_SYMB99">W_Deactivated_3</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB295" output="SYMB136_SYMB99">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB294" output="SYMB136_SYMB99">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB230_SYMB141" output="SYMB136_SYMB99">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB136_SYMB99" output="SYMB136_SYMB99">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB1810_SYMB240" output="SYMB136_SYMB99">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB93_" output="SYMB136_SYMB99">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB295" output="SYMB1810_SYMB240">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB294" output="SYMB1810_SYMB240">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB230_SYMB141" output="SYMB1810_SYMB240">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB136_SYMB99" output="SYMB1810_SYMB240">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB1810_SYMB240" output="SYMB1810_SYMB240">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB93_" output="SYMB1810_SYMB240">W_Deactivated_2</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB295" output="SYMB136_SYMB99">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB294" output="SYMB136_SYMB99">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB230_SYMB141" output="SYMB136_SYMB99">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB136_SYMB99" output="SYMB136_SYMB99">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB1810_SYMB240" output="SYMB136_SYMB99">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB93_" output="SYMB136_SYMB99">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB295" output="SYMB1810_SYMB240">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB299_SYMB294" output="SYMB1810_SYMB240">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB230_SYMB141" output="SYMB1810_SYMB240">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB136_SYMB99" output="SYMB1810_SYMB240">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB1810_SYMB240" output="SYMB1810_SYMB240">W_Deactivated_1</gn:predicate>
+        <gn:predicate input="SYMB93_" output="SYMB1810_SYMB240">W_Deactivated_1</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="Activated_Transition" name="Activated" positionX="930" positionY="460" sizeY="150">
+      <gn:inputs>
+        <gn:input ref="SYMB135_SYMB99">
+          <gn:arc>
+            <gn:point positionX="245" positionY="240" />
+            <gn:point positionX="900" positionY="240" />
+            <gn:point positionX="900" positionY="470" />
+            <gn:point positionX="930" positionY="470" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB229_SYMB140">
+          <gn:arc>
+            <gn:point positionX="955" positionY="590" />
+            <gn:point positionX="965" positionY="590" />
+            <gn:point positionX="965" positionY="620" />
+            <gn:point positionX="895" positionY="620" />
+            <gn:point positionX="895" positionY="590" />
+            <gn:point positionX="930" positionY="590" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB246_SYMB238">
+          <gn:arc>
+            <gn:point positionX="385" positionY="290" />
+            <gn:point positionX="890" positionY="290" />
+            <gn:point positionX="890" positionY="500" />
+            <gn:point positionX="930" positionY="500" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB309_SYMB302">
+          <gn:arc>
+            <gn:point positionX="815" positionY="500" />
+            <gn:point positionX="880" positionY="500" />
+            <gn:point positionX="880" positionY="530" />
+            <gn:point positionX="930" positionY="530" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB309_SYMB303">
+          <gn:arc>
+            <gn:point positionX="815" positionY="530" />
+            <gn:point positionX="870" positionY="530" />
+            <gn:point positionX="870" positionY="560" />
+            <gn:point positionX="930" positionY="560" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="SYMB228_SYMB139">
+          <gn:arc>
+            <gn:point positionX="930" positionY="470" />
+            <gn:point positionX="945" positionY="470" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB229_SYMB140">
+          <gn:arc>
+            <gn:point positionX="930" positionY="590" />
+            <gn:point positionX="945" positionY="590" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB230_SYMB141">
+          <gn:arc>
+            <gn:point positionX="930" positionY="500" />
+            <gn:point positionX="945" positionY="500" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="SYMB135_SYMB99" output="SYMB228_SYMB139">W_Activated_1</gn:predicate>
+        <gn:predicate input="SYMB229_SYMB140" output="SYMB228_SYMB139">W_Activated_1</gn:predicate>
+        <gn:predicate input="SYMB246_SYMB238" output="SYMB228_SYMB139">W_Activated_1</gn:predicate>
+        <gn:predicate input="SYMB309_SYMB302" output="SYMB228_SYMB139">W_Activated_1</gn:predicate>
+        <gn:predicate input="SYMB309_SYMB303" output="SYMB228_SYMB139">W_Activated_1</gn:predicate>
+        <gn:predicate input="SYMB135_SYMB99" output="SYMB229_SYMB140">W_Activated_2</gn:predicate>
+        <gn:predicate input="SYMB229_SYMB140" output="SYMB229_SYMB140">W_Activated_2</gn:predicate>
+        <gn:predicate input="SYMB246_SYMB238" output="SYMB229_SYMB140">W_Activated_2</gn:predicate>
+        <gn:predicate input="SYMB309_SYMB302" output="SYMB229_SYMB140">W_Activated_2</gn:predicate>
+        <gn:predicate input="SYMB309_SYMB303" output="SYMB229_SYMB140">W_Activated_2</gn:predicate>
+        <gn:predicate input="SYMB135_SYMB99" output="SYMB230_SYMB141">W_Activated_3</gn:predicate>
+        <gn:predicate input="SYMB229_SYMB140" output="SYMB230_SYMB141">W_Activated_3</gn:predicate>
+        <gn:predicate input="SYMB246_SYMB238" output="SYMB230_SYMB141">W_Activated_3</gn:predicate>
+        <gn:predicate input="SYMB309_SYMB302" output="SYMB230_SYMB141">W_Activated_3</gn:predicate>
+        <gn:predicate input="SYMB309_SYMB303" output="SYMB230_SYMB141">W_Activated_3</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="Call_Request_Transition" name="Call_Request" positionX="360" positionY="280" sizeY="60">
+      <gn:inputs>
+        <gn:input ref="SYMB228_SYMB139">
+          <gn:arc>
+            <gn:point positionX="955" positionY="470" />
+            <gn:point positionX="965" positionY="470" />
+            <gn:point positionX="965" positionY="250" />
+            <gn:point positionX="330" positionY="250" />
+            <gn:point positionX="330" positionY="290" />
+            <gn:point positionX="360" positionY="290" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="SYMB245_SYMB235">
+          <gn:arc>
+            <gn:point positionX="360" positionY="320" />
+            <gn:point positionX="375" positionY="320" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB246_SYMB238">
+          <gn:arc>
+            <gn:point positionX="360" positionY="290" />
+            <gn:point positionX="375" positionY="290" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="SYMB228_SYMB139" output="SYMB245_SYMB235">W_Call_Request_1</gn:predicate>
+        <gn:predicate input="SYMB228_SYMB139" output="SYMB246_SYMB238">W_Call_Request_2</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="Data_Transfer_Transition" name="Data_Transfer" positionX="490" positionY="330" sizeY="90">
+      <gn:inputs>
+        <gn:input ref="SYMB245_SYMB235">
+          <gn:arc>
+            <gn:point positionX="385" positionY="320" />
+            <gn:point positionX="450" positionY="320" />
+            <gn:point positionX="450" positionY="370" />
+            <gn:point positionX="490" positionY="370" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB291_SYMB267">
+          <gn:arc>
+            <gn:point positionX="655" positionY="410" />
+            <gn:point positionX="665" positionY="410" />
+            <gn:point positionX="665" positionY="300" />
+            <gn:point positionX="460" positionY="300" />
+            <gn:point positionX="460" positionY="340" />
+            <gn:point positionX="490" positionY="340" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="SYMB262_SYMB249">
+          <gn:arc>
+            <gn:point positionX="490" positionY="400" />
+            <gn:point positionX="505" positionY="400" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB263_SYMB250">
+          <gn:arc>
+            <gn:point positionX="490" positionY="370" />
+            <gn:point positionX="505" positionY="370" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB264_SYMB251">
+          <gn:arc>
+            <gn:point positionX="490" positionY="340" />
+            <gn:point positionX="505" positionY="340" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="SYMB245_SYMB235" output="SYMB262_SYMB249">W_Data_Transfer_1</gn:predicate>
+        <gn:predicate input="SYMB291_SYMB267" output="SYMB262_SYMB249">W_Data_Transfer_1</gn:predicate>
+        <gn:predicate input="SYMB245_SYMB235" output="SYMB263_SYMB250">W_Data_Transfer_2</gn:predicate>
+        <gn:predicate input="SYMB291_SYMB267" output="SYMB263_SYMB250">W_Data_Transfer_2</gn:predicate>
+        <gn:predicate input="SYMB245_SYMB235" output="SYMB264_SYMB251">W_Data_Transfer_3</gn:predicate>
+        <gn:predicate input="SYMB291_SYMB267" output="SYMB264_SYMB251">W_Data_Transfer_3</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="DT_TxQuit_Transition" name="DT_TxQuit" positionX="630" positionY="400" sizeY="150">
+      <gn:inputs>
+        <gn:input ref="SYMB262_SYMB249">
+          <gn:arc>
+            <gn:point positionX="515" positionY="400" />
+            <gn:point positionX="600" positionY="400" />
+            <gn:point positionX="600" positionY="410" />
+            <gn:point positionX="630" positionY="410" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="SYMB2262_SYMB2261">
+          <gn:arc>
+            <gn:point positionX="630" positionY="470" />
+            <gn:point positionX="645" positionY="470" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB2262_SYMB2264">
+          <gn:arc>
+            <gn:point positionX="630" positionY="530" />
+            <gn:point positionX="645" positionY="530" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB291_SYMB267">
+          <gn:arc>
+            <gn:point positionX="630" positionY="410" />
+            <gn:point positionX="645" positionY="410" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB286_SYMB268">
+          <gn:arc>
+            <gn:point positionX="630" positionY="500" />
+            <gn:point positionX="645" positionY="500" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB288_SYMB269">
+          <gn:arc>
+            <gn:point positionX="630" positionY="440" />
+            <gn:point positionX="645" positionY="440" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB2262_SYMB2261">W_DT_TxQuit_1</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB2262_SYMB2264">W_DT_TxQuit_1</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB286_SYMB268">W_DT_TxQuit_1</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB2262_SYMB2261">W_DT_TxQuit_2</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB2262_SYMB2264">W_DT_TxQuit_2</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB286_SYMB268">W_DT_TxQuit_2</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB291_SYMB267">W_DT_TxQuit_3</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB2262_SYMB2261">W_DT_TxQuit_4</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB2262_SYMB2264">W_DT_TxQuit_4</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB286_SYMB268">W_DT_TxQuit_4</gn:predicate>
+        <gn:predicate input="SYMB262_SYMB249" output="SYMB288_SYMB269">W_DT_TxQuit_5</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="Deactivate_Request_Transition" name="Deactivate_Request" positionX="80" positionY="100" sizeY="90">
+      <gn:inputs>
+        <gn:input ref="SYMB264_SYMB251">
+          <gn:arc>
+            <gn:point positionX="515" positionY="340" />
+            <gn:point positionX="525" positionY="340" />
+            <gn:point positionX="525" positionY="70" />
+            <gn:point positionX="50" positionY="70" />
+            <gn:point positionX="50" positionY="110" />
+            <gn:point positionX="80" positionY="110" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB288_SYMB269">
+          <gn:arc>
+            <gn:point positionX="655" positionY="440" />
+            <gn:point positionX="675" positionY="440" />
+            <gn:point positionX="675" positionY="60" />
+            <gn:point positionX="40" positionY="60" />
+            <gn:point positionX="40" positionY="140" />
+            <gn:point positionX="80" positionY="140" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB310_SYMB304">
+          <gn:arc>
+            <gn:point positionX="815" positionY="440" />
+            <gn:point positionX="825" positionY="440" />
+            <gn:point positionX="825" positionY="50" />
+            <gn:point positionX="30" positionY="50" />
+            <gn:point positionX="30" positionY="170" />
+            <gn:point positionX="80" positionY="170" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="SYMB299_SYMB294">
+          <gn:arc>
+            <gn:point positionX="80" positionY="170" />
+            <gn:point positionX="95" positionY="170" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB299_SYMB295">
+          <gn:arc>
+            <gn:point positionX="80" positionY="140" />
+            <gn:point positionX="95" positionY="140" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="SYMB264_SYMB251" output="SYMB299_SYMB294">W_Deactivate_Request_1</gn:predicate>
+        <gn:predicate input="SYMB288_SYMB269" output="SYMB299_SYMB294">W_Deactivate_Request_1</gn:predicate>
+        <gn:predicate input="SYMB310_SYMB304" output="SYMB299_SYMB294">W_Deactivate_Request_1</gn:predicate>
+        <gn:predicate input="SYMB264_SYMB251" output="SYMB299_SYMB295">W_Deactivate_Request_1</gn:predicate>
+        <gn:predicate input="SYMB288_SYMB269" output="SYMB299_SYMB295">W_Deactivate_Request_1</gn:predicate>
+        <gn:predicate input="SYMB310_SYMB304" output="SYMB299_SYMB295">W_Deactivate_Request_1</gn:predicate>
+        <gn:predicate input="SYMB264_SYMB251" output="SYMB299_SYMB294">W_Deactivate_Request_2</gn:predicate>
+        <gn:predicate input="SYMB288_SYMB269" output="SYMB299_SYMB294">W_Deactivate_Request_2</gn:predicate>
+        <gn:predicate input="SYMB310_SYMB304" output="SYMB299_SYMB294">W_Deactivate_Request_2</gn:predicate>
+        <gn:predicate input="SYMB264_SYMB251" output="SYMB299_SYMB295">W_Deactivate_Request_2</gn:predicate>
+        <gn:predicate input="SYMB288_SYMB269" output="SYMB299_SYMB295">W_Deactivate_Request_2</gn:predicate>
+        <gn:predicate input="SYMB310_SYMB304" output="SYMB299_SYMB295">W_Deactivate_Request_2</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+    <gn:transition id="Disconnect_Request_Transition" name="Disconnect_Request" positionX="790" positionY="430" sizeY="120">
+      <gn:inputs>
+        <gn:input ref="SYMB263_SYMB250">
+          <gn:arc>
+            <gn:point positionX="515" positionY="370" />
+            <gn:point positionX="760" positionY="370" />
+            <gn:point positionX="760" positionY="440" />
+            <gn:point positionX="790" positionY="440" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB2262_SYMB2261">
+          <gn:arc>
+            <gn:point positionX="655" positionY="470" />
+            <gn:point positionX="750" positionY="470" />
+            <gn:point positionX="750" positionY="470" />
+            <gn:point positionX="790" positionY="470" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB2262_SYMB2264">
+          <gn:arc>
+            <gn:point positionX="655" positionY="530" />
+            <gn:point positionX="730" positionY="530" />
+            <gn:point positionX="730" positionY="530" />
+            <gn:point positionX="790" positionY="530" />
+          </gn:arc>
+        </gn:input>
+        <gn:input ref="SYMB286_SYMB268">
+          <gn:arc>
+            <gn:point positionX="655" positionY="500" />
+            <gn:point positionX="740" positionY="500" />
+            <gn:point positionX="740" positionY="500" />
+            <gn:point positionX="790" positionY="500" />
+          </gn:arc>
+        </gn:input>
+      </gn:inputs>
+      <gn:outputs>
+        <gn:output ref="SYMB309_SYMB302">
+          <gn:arc>
+            <gn:point positionX="790" positionY="500" />
+            <gn:point positionX="805" positionY="500" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB309_SYMB303">
+          <gn:arc>
+            <gn:point positionX="790" positionY="530" />
+            <gn:point positionX="805" positionY="530" />
+          </gn:arc>
+        </gn:output>
+        <gn:output ref="SYMB310_SYMB304">
+          <gn:arc>
+            <gn:point positionX="790" positionY="440" />
+            <gn:point positionX="805" positionY="440" />
+          </gn:arc>
+        </gn:output>
+      </gn:outputs>
+      <gn:predicates>
+        <gn:predicate input="SYMB286_SYMB268" output="SYMB310_SYMB304">W_Disconnect_Request_3</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2264" output="SYMB310_SYMB304">W_Disconnect_Request_3</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2261" output="SYMB310_SYMB304">W_Disconnect_Request_3</gn:predicate>
+        <gn:predicate input="SYMB263_SYMB250" output="SYMB310_SYMB304">W_Disconnect_Request_3</gn:predicate>
+        <gn:predicate input="SYMB286_SYMB268" output="SYMB309_SYMB303">W_Disconnect_Request_2</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2264" output="SYMB309_SYMB303">W_Disconnect_Request_2</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2261" output="SYMB309_SYMB303">W_Disconnect_Request_2</gn:predicate>
+        <gn:predicate input="SYMB263_SYMB250" output="SYMB309_SYMB303">W_Disconnect_Request_2</gn:predicate>
+        <gn:predicate input="SYMB286_SYMB268" output="SYMB309_SYMB302">W_Disconnect_Request_2</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2264" output="SYMB309_SYMB302">W_Disconnect_Request_2</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2261" output="SYMB309_SYMB302">W_Disconnect_Request_2</gn:predicate>
+        <gn:predicate input="SYMB263_SYMB250" output="SYMB309_SYMB302">W_Disconnect_Request_2</gn:predicate>
+        <gn:predicate input="SYMB286_SYMB268" output="SYMB309_SYMB303">W_Disconnect_Request_1</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2264" output="SYMB309_SYMB303">W_Disconnect_Request_1</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2261" output="SYMB309_SYMB303">W_Disconnect_Request_1</gn:predicate>
+        <gn:predicate input="SYMB263_SYMB250" output="SYMB309_SYMB303">W_Disconnect_Request_1</gn:predicate>
+        <gn:predicate input="SYMB286_SYMB268" output="SYMB309_SYMB302">W_Disconnect_Request_1</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2264" output="SYMB309_SYMB302">W_Disconnect_Request_1</gn:predicate>
+        <gn:predicate input="SYMB2262_SYMB2261" output="SYMB309_SYMB302">W_Disconnect_Request_1</gn:predicate>
+        <gn:predicate input="SYMB263_SYMB250" output="SYMB309_SYMB302">W_Disconnect_Request_1</gn:predicate>
+      </gn:predicates>
+    </gn:transition>
+  </gn:transitions>
+  <gn:places>
+    <gn:place id="SYMB310_SYMB304" name="Disconnect_Request@Deactivate_Request" char="SYMB310_SYMB304_fun" positionX="810" positionY="440" />
+    <gn:place id="SYMB309_SYMB303" name="Disconnect_Request@Activated" char="SYMB309_SYMB303_fun" positionX="810" positionY="530" />
+    <gn:place id="SYMB309_SYMB302" name="Disconnect_Request@Activated" char="SYMB309_SYMB302_fun" positionX="810" positionY="500" />
+    <gn:place id="SYMB299_SYMB295" name="Deactivate_Request@Deactivated" char="SYMB299_SYMB295_fun" positionX="100" positionY="140" />
+    <gn:place id="SYMB299_SYMB294" name="Deactivate_Request@Deactivated" char="SYMB299_SYMB294_fun" positionX="100" positionY="170" />
+    <gn:place id="SYMB288_SYMB269" name="DT_TxQuit@Deactivate_Request" char="SYMB288_SYMB269_fun" positionX="650" positionY="440" />
+    <gn:place id="SYMB286_SYMB268" name="DT_TxQuit@Disconnect_Request" char="SYMB286_SYMB268_fun" positionX="650" positionY="500" />
+    <gn:place id="SYMB291_SYMB267" name="DT_TxQuit@Data_Transfer" char="SYMB291_SYMB267_fun" positionX="650" positionY="410" />
+    <gn:place id="SYMB2262_SYMB2264" name="DT_TxQuit@Disconnect_Request" char="SYMB2262_SYMB2264_fun" positionX="650" positionY="530" />
+    <gn:place id="SYMB2262_SYMB2261" name="DT_TxQuit@Disconnect_Request" char="SYMB2262_SYMB2261_fun" positionX="650" positionY="470" />
+    <gn:place id="SYMB264_SYMB251" name="Data_Transfer@Deactivate_Request" char="SYMB264_SYMB251_fun" positionX="510" positionY="340" />
+    <gn:place id="SYMB263_SYMB250" name="Data_Transfer@Disconnect_Request" char="SYMB263_SYMB250_fun" positionX="510" positionY="370" />
+    <gn:place id="SYMB262_SYMB249" name="Data_Transfer@DT_TxQuit" char="SYMB262_SYMB249_fun" positionX="510" positionY="400" />
+    <gn:place id="SYMB246_SYMB238" name="Call_Request@Activated" char="SYMB246_SYMB238_fun" positionX="380" positionY="290" />
+    <gn:place id="SYMB245_SYMB235" name="Call_Request@Data_Transfer" char="SYMB245_SYMB235_fun" positionX="380" positionY="320" />
+    <gn:place id="SYMB230_SYMB141" name="Activated@Deactivated" char="SYMB230_SYMB141_fun" positionX="950" positionY="500" />
+    <gn:place id="SYMB229_SYMB140" name="Activated@Activated" char="SYMB229_SYMB140_fun" positionX="950" positionY="590" />
+    <gn:place id="SYMB228_SYMB139" name="Activated@Call_Request" char="SYMB228_SYMB139_fun" positionX="950" positionY="470" />
+    <gn:place id="SYMB135_SYMB99" name="Deactivated@Activated" char="SYMB135_SYMB99_fun" positionX="240" positionY="240" />
+    <gn:place id="SYMB136_SYMB99" name="Deactivated@Deactivated" char="SYMB136_SYMB99_fun" positionX="240" positionY="300" />
+    <gn:place id="SYMB1810_SYMB240" name="Deactivated@Deactivated" char="SYMB1810_SYMB240_fun" positionX="240" positionY="270" />
+    <gn:place id="SYMB93_" name="Start@Deactivated" char="SYMB93__fun" positionX="200" positionY="150" />
+  </gn:places>
+  <gn:tokens>
+    <gn:token id="SYMB93__Token_1" name="User 1" host="SYMB93_">
+      <gn:char name="Name" type="string">Flow from User 1</gn:char>
+      <gn:char name="Default" type="double">1</gn:char>
+    </gn:token>
+  </gn:tokens>
+  <gn:functions>
+
+					(defun SYMB310_SYMB304_fun "" () (dice)
+
+					
+					(print "System in state: Disconnect_Request")
+				
+		(print "Received input signal Deactivation_req")
+		
+		(set-named tokenobj "Signal/Deactivation_req" 0)
+							
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB309_SYMB303_fun "" () (dice)
+
+					
+					(print "System in state: Disconnect_Request")
+				
+		(print "Received input signal Timer4")
+		
+		(set-named tokenobj "Signal/Timer4" 0)
+		
+		(print "Calling procedure Discard_Connection")
+		
+			(print "Sent output signal Disconnect_conf")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 70)
+					(set-named tokenobj "Signal/Connect_req" (trace (+ time (random-exp (/ 1 10)))))
+					
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Deactivation_req" (trace (+ time (random-exp (/ 1 10)))))
+					0
+				)
+			
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB309_SYMB302_fun "" () (dice)
+
+					
+					(print "System in state: Disconnect_Request")
+				
+		(print "Received input signal DISC_conf")
+		
+		(set-named tokenobj "Signal/DISC_conf" 0)
+		
+		(print "Reset timer RESET(Timer4)")
+		
+				(set-named tokenobj "Signal/Timer4" 0)
+			
+		(print "Calling procedure Discard_Connection")
+		
+			(print "Sent output signal Disconnect_conf")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 70)
+					(set-named tokenobj "Signal/Connect_req" (trace (+ time (random-exp (/ 1 10)))))
+					
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Deactivation_req" (trace (+ time (random-exp (/ 1 10)))))
+					0
+				)
+			
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB299_SYMB295_fun "" () (dice)
+
+					
+					(print "System in state: Deactivate_Request")
+				
+		(print "Received input signal Timer4")
+		
+		(set-named tokenobj "Signal/Timer4" 0)
+		
+		(print "Calling procedure Discard_Connection")
+		
+			(print "Sent output signal Deactivation_conf")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Activate_req" (trace (+ time (random-exp (/ 1 40)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB299_SYMB294_fun "" () (dice)
+
+					
+					(print "System in state: Deactivate_Request")
+				
+		(print "Received input signal DISC_conf")
+		
+		(set-named tokenobj "Signal/DISC_conf" 0)
+		
+		(print "Reset timer RESET(Timer4)")
+		
+				(set-named tokenobj "Signal/Timer4" 0)
+			
+		(print "Calling procedure Discard_Connection")
+		
+			(print "Sent output signal Deactivation_conf")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Activate_req" (trace (+ time (random-exp (/ 1 40)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB288_SYMB269_fun "" () (dice)
+
+					
+					(print "System in state: DT_TxQuit")
+				
+		(print "Received input signal Deactivation_req")
+		
+		(set-named tokenobj "Signal/Deactivation_req" 0)
+		
+		(print "Reset timer RESET(TimerActive)")
+		
+				(set-named tokenobj "Signal/TimerActive" 0)
+			
+		(print "Reset timer RESET(TimerTxQuit)")
+		
+				(set-named tokenobj "Signal/TimerTxQuit" 0)
+			
+			(print "Initialized timer SET(NOW + 10,Timer4)")
+			
+				(set-named tokenobj "Signal/Timer4" (+ time 10))
+			
+			(print "Sent output signal DISC_req(Cause_Val)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/DISC_conf" (trace (+ time (random-exp (/ 1 5)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB286_SYMB268_fun "" () (dice)
+
+					
+					(print "System in state: DT_TxQuit")
+				
+		(print "Received input signal Disconnect_req")
+		
+		(set-named tokenobj "Signal/Disconnect_req" 0)
+		
+		(print "Reset timer RESET(TimerActive)")
+		
+				(set-named tokenobj "Signal/TimerActive" 0)
+			
+		(print "Reset timer RESET(TimerTxQuit)")
+		
+				(set-named tokenobj "Signal/TimerTxQuit" 0)
+			
+			(print "Initialized timer SET(NOW + 10, Timer4)")
+			
+				(set-named tokenobj "Signal/Timer4" (+ time 10))
+			
+			(print "Sent output signal DISC_req(Cause_Val)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/DISC_conf" (trace (+ time (random-exp (/ 1 5)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB291_SYMB267_fun "" () (dice)
+
+					
+					(print "System in state: DT_TxQuit")
+				
+		(print "Received input signal Data_conf")
+		
+		(set-named tokenobj "Signal/Data_conf" 0)
+		
+		(print "Reset timer RESET(TimerActive)")
+		
+				(set-named tokenobj "Signal/TimerActive" 0)
+			
+			(print "Initialized timer SET(NOW + 10,TimerActive)")
+			
+				(set-named tokenobj "Signal/TimerActive" (+ time 10))
+			
+		(print "Reset timer RESET(TimerTxQuit)")
+		
+				(set-named tokenobj "Signal/TimerTxQuit" 0)
+			
+			(print "Sent output signal Data_conf")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 60)
+					(set-named tokenobj "Signal/Data_req" (trace (+ time (random-exp (/ 1 5)))))
+					
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/Disconnect_req" (trace (+ time (random-exp (/ 1 10)))))
+					
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Deactivation_req" (trace (+ time (random-exp (/ 1 15)))))
+					0
+				)
+			
+				)
+			
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB2262_SYMB2264_fun "" () (dice)
+
+					
+					(print "System in state: DT_TxQuit")
+				
+		(print "Received input signal TimerTxQuit")
+		
+		(set-named tokenobj "Signal/TimerTxQuit" 0)
+		
+		(print "Reset timer RESET(TimerActive)")
+		
+				(set-named tokenobj "Signal/TimerActive" 0)
+			
+			(print "Initialized timer SET(NOW + 10,Timer4)")
+			
+				(set-named tokenobj "Signal/Timer4" (+ time 10))
+			
+			(print "Sent output signal DISC_req(Cause_Val)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/DISC_conf" (trace (+ time (random-exp (/ 1 5)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB2262_SYMB2261_fun "" () (dice)
+
+					
+					(print "System in state: DT_TxQuit")
+				
+		(print "Received input signal TimerActive")
+		
+		(set-named tokenobj "Signal/TimerActive" 0)
+		
+		(print "Reset timer RESET(TimerActive)")
+		
+				(set-named tokenobj "Signal/TimerActive" 0)
+			
+			(print "Initialized timer SET(NOW + 10,Timer4)")
+			
+				(set-named tokenobj "Signal/Timer4" (+ time 10))
+			
+			(print "Sent output signal DISC_req(Cause_Val)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/DISC_conf" (trace (+ time (random-exp (/ 1 5)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB264_SYMB251_fun "" () (dice)
+
+					
+					(print "System in state: Data_Transfer")
+				
+		(print "Received input signal Deactivation_req")
+		
+		(set-named tokenobj "Signal/Deactivation_req" 0)
+		
+		(print "Reset timer RESET(TimerActive)")
+		
+				(set-named tokenobj "Signal/TimerActive" 0)
+			
+			(print "Initialized timer SET(NOW + 10,Timer4)")
+			
+				(set-named tokenobj "Signal/Timer4" (+ time 10))
+			
+			(print "Sent output signal DISC_req(Cause_Val)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/DISC_conf" (trace (+ time (random-exp (/ 1 5)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB263_SYMB250_fun "" () (dice)
+
+					
+					(print "System in state: Data_Transfer")
+				
+		(print "Received input signal Disconnect_req")
+		
+		(set-named tokenobj "Signal/Disconnect_req" 0)
+		
+		(print "Reset timer RESET(TimerActive)")
+		
+				(set-named tokenobj "Signal/TimerActive" 0)
+			
+			(print "Initialized timer SET(NOW + 10,Timer4)")
+			
+				(set-named tokenobj "Signal/Timer4" (+ time 10))
+			
+			(print "Sent output signal DISC_req(Cause_Val)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/DISC_conf" (trace (+ time (random-exp (/ 1 5)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB262_SYMB249_fun "" () (dice)
+
+					
+					(print "System in state: Data_Transfer")
+				
+		(print "Received input signal Data_req")
+		
+		(set-named tokenobj "Signal/Data_req" 0)
+		
+		(print "Reset timer RESET(TimerActive)")
+		
+				(set-named tokenobj "Signal/TimerActive" 0)
+			
+			(print "Initialized timer SET(NOW + 10,TimerActive)")
+			
+				(set-named tokenobj "Signal/TimerActive" (+ time 10))
+			
+			(print "Initialized timer SET(NOW + 10,TimerTxQuit)")
+			
+				(set-named tokenobj "Signal/TimerTxQuit" (+ time 10))
+			
+			(print "Sent output signal Data_req")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/Data_conf" (trace (+ time (random-exp (/ 1 7)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB246_SYMB238_fun "" () (dice)
+
+					
+					(print "System in state: Call_Request")
+				
+		(print "Received input signal Timer2")
+		
+		(set-named tokenobj "Signal/Timer2" 0)
+		
+		(print "Calling procedure Discard_Connection")
+		
+			(print "Sent output signal Connect_conf(TIME_OUT)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 60)
+					(set-named tokenobj "Signal/Connect_req" (trace (+ time (random-exp (/ 1 20)))))
+					
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/Deactivation_req" (trace (+ time (random-exp (/ 1 10)))))
+					0
+				)
+			
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB245_SYMB235_fun "" () (dice)
+
+					
+					(print "System in state: Call_Request")
+				
+		(print "Received input signal CALL_conf")
+		
+		(set-named tokenobj "Signal/CALL_conf" 0)
+		
+			(print "Initialized timer SET(NOW + 15,Timer2)")
+			
+				(set-named tokenobj "Signal/Timer2" (+ time 15))
+			
+			(print "Sent output signal Connect_conf(CONNECTION_ESTABLISHED)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 80)
+					(set-named tokenobj "Signal/Data_req" (trace (+ time (random-exp (/ 1 10)))))
+					
+				(if (&lt;= dice 90)
+					(set-named tokenobj "Signal/Disconnect_req" (trace (+ time (random-exp (/ 1 15)))))
+					
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Deactivation_req" (trace (+ time (random-exp (/ 1 20)))))
+					0
+				)
+			
+				)
+			
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB230_SYMB141_fun "" () (dice)
+
+					
+					(print "System in state: Activated")
+				
+		(print "Received input signal Deactivation_req")
+		
+		(set-named tokenobj "Signal/Deactivation_req" 0)
+		
+			(print "Sent output signal Deactivation_conf")
+			0					
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB229_SYMB140_fun "" () (dice)
+
+					
+					(print "System in state: Activated")
+				
+		(print "Received input signal Disconnect_req")
+		
+		(set-named tokenobj "Signal/Disconnect_req" 0)
+		
+			(print "Sent output signal Disconnect_conf")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 70)
+					(set-named tokenobj "Signal/Connect_conf" (trace (+ time (random-exp (/ 1 10)))))
+					
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Deactivation_req" (trace (+ time (random-exp (/ 1 10)))))
+					0
+				)
+			
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB228_SYMB139_fun "" () (dice)
+
+					
+					(print "System in state: Activated")
+				
+		(print "Received input signal Connect_req")
+		
+		(set-named tokenobj "Signal/Connect_req" 0)
+		
+		(print "Calling procedure Establish_Connection")
+		
+			(print "Initialized timer SET(NOW + 15,Timer2)")
+			
+				(set-named tokenobj "Signal/Timer2" (+ time 15))
+			
+			(print "Sent output signal CALL_req")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 80)
+					(set-named tokenobj "Signal/CALL_conf" (trace (+ time (random-exp (/ 1 10)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB135_SYMB99_fun "" () (dice)
+
+					
+					(print "System in state: Deactivated")
+				
+		(print "Received input signal Activate_req")
+		
+		(set-named tokenobj "Signal/Activate_req" 0)
+		
+			(print "Initialized timer SET(NOW + 10,Timer1)")
+			
+				(set-named tokenobj "Signal/Timer1" (+ time 10))
+			
+		(print "Calling procedure Initialisation")
+		
+		(print "Decision: success = 1")
+		
+		(print "Decision evaluated to true")
+		
+			(print "Sent output signal Activate_conf(OK)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 85)
+					(set-named tokenobj "Signal/Connect_req" (trace (+ time (random-exp (/ 1 10)))))
+					
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Deactivate_req" (trace (+ time (random-exp (/ 1 10)))))
+					0
+				)
+			
+				)
+			
+		(print "Reset timer RESET(Timer1)")
+		
+				(set-named tokenobj "Signal/Timer1" 0)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB136_SYMB99_fun "" () (dice)
+
+					
+					(print "System in state: Deactivated")
+				
+		(print "Received input signal Activate_req")
+		
+		(set-named tokenobj "Signal/Activate_req" 0)
+		
+			(print "Initialized timer SET(NOW + 10,Timer1)")
+			
+				(set-named tokenobj "Signal/Timer1" (+ time 10))
+			
+		(print "Calling procedure Initialisation")
+		
+		(print "Decision: success = 1")
+		
+		(print "Decision evaluated to false")
+		
+			(print "Sent output signal Activate_conf(ERROR)")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 30)
+					(set-named tokenobj "Signal/Activate_req" (trace (+ time (random-exp (/ 1 20)))))
+					0
+				)
+			
+		(print "Reset timer RESET(Timer1)")
+		
+				(set-named tokenobj "Signal/Timer1" 0)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB1810_SYMB240_fun "" () (dice)
+
+					
+					(print "System in state: Deactivated")
+				
+		(print "Received input signal Timer1")
+		
+		(set-named tokenobj "Signal/Timer1" 0)
+		
+			(print "Sent output signal Activate_conf(ERROR)")
+			0					
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+
+					(defun SYMB93__fun "" () (dice)
+
+					
+			(print "System started")
+			
+					(let dice (random 100))
+				
+				(if (&lt;= dice 100)
+					(set-named tokenobj "Signal/Activate_req" (trace (+ time (random-exp (/ 1 1)))))
+					0
+				)
+								
+					
+;					(print (xml-output tokenobj))
+										
+			)
+	
+								(defun W_Deactivate_Request_2 "" () ()
+									(and (!= (get-named tokenobj "Signal/Timer4") 0) (&gt;= time (get-named tokenobj "Signal/Timer4")))
+								)
+							
+								(defun W_Deactivate_Request_1 "" () ()
+									(and (!= (get-named tokenobj "Signal/DISC_conf") 0) (&gt;= time (get-named tokenobj "Signal/DISC_conf")))
+								)
+							
+								(defun W_DT_TxQuit_5 "" () ()
+									(and (!= (get-named tokenobj "Signal/Deactivation_req") 0) (&gt;= time (get-named tokenobj "Signal/Deactivation_req")))
+								)
+							
+								(defun W_DT_TxQuit_4 "" () ()
+									(and (!= (get-named tokenobj "Signal/Disconnect_req") 0) (&gt;= time (get-named tokenobj "Signal/Disconnect_req")))
+								)
+							
+								(defun W_DT_TxQuit_3 "" () ()
+									(and (!= (get-named tokenobj "Signal/Data_conf") 0) (&gt;= time (get-named tokenobj "Signal/Data_conf")))
+								)
+							
+								(defun W_DT_TxQuit_2 "" () ()
+									(and (!= (get-named tokenobj "Signal/TimerTxQuit") 0) (&gt;= time (get-named tokenobj "Signal/TimerTxQuit")))
+								)
+							
+								(defun W_DT_TxQuit_1 "" () ()
+									(and (!= (get-named tokenobj "Signal/TimerActive") 0) (&gt;= time (get-named tokenobj "Signal/TimerActive")))
+								)
+							
+								(defun W_Data_Transfer_3 "" () ()
+									(and (!= (get-named tokenobj "Signal/Deactivation_req") 0) (&gt;= time (get-named tokenobj "Signal/Deactivation_req")))
+								)
+							
+								(defun W_Disconnect_Request_3 "" () ()
+									(and (!= (get-named tokenobj "Signal/Deactivation_req") 0) (&gt;= time (get-named tokenobj "Signal/Deactivation_req")))
+								)
+							
+								(defun W_Disconnect_Request_2 "" () ()
+									(and (!= (get-named tokenobj "Signal/Timer4") 0) (&gt;= time (get-named tokenobj "Signal/Timer4")))
+								)
+							
+								(defun W_Disconnect_Request_1 "" () ()
+									(and (!= (get-named tokenobj "Signal/DISC_conf") 0) (&gt;= time (get-named tokenobj "Signal/DISC_conf")))
+								)
+							
+								(defun W_Deactivated_3 "" () ()
+									(and (!= (get-named tokenobj "Signal/Activate_req") 0) (&gt;= time (get-named tokenobj "Signal/Activate_req")))
+								)
+							
+								(defun W_Deactivated_2 "" () ()
+									(and (!= (get-named tokenobj "Signal/Activate_req") 0) (&gt;= time (get-named tokenobj "Signal/Activate_req")))
+								)
+							
+								(defun W_Deactivated_1 "" () ()
+									(and (!= (get-named tokenobj "Signal/Timer1") 0) (&gt;= time (get-named tokenobj "Signal/Timer1")))
+								)
+							
+								(defun W_Data_Transfer_2 "" () ()
+									(and (!= (get-named tokenobj "Signal/Disconnect_req") 0) (&gt;= time (get-named tokenobj "Signal/Disconnect_req")))
+								)
+							
+								(defun W_Data_Transfer_1 "" () ()
+									(and (!= (get-named tokenobj "Signal/Data_req") 0) (&gt;= time (get-named tokenobj "Signal/Data_req")))
+								)
+							
+								(defun W_Call_Request_2 "" () ()
+									(and (!= (get-named tokenobj "Signal/Timer2") 0) (&gt;= time (get-named tokenobj "Signal/Timer2")))
+								)
+							
+								(defun W_Call_Request_1 "" () ()
+									(and (!= (get-named tokenobj "Signal/CALL_conf") 0) (&gt;= time (get-named tokenobj "Signal/CALL_conf")))
+								)
+							
+								(defun W_Activated_3 "" () ()
+									(and (!= (get-named tokenobj "Signal/Deactivation_req") 0) (&gt;= time (get-named tokenobj "Signal/Deactivation_req")))
+								)
+							
+								(defun W_Activated_2 "" () ()
+									(and (!= (get-named tokenobj "Signal/Disconnect_req") 0) (&gt;= time (get-named tokenobj "Signal/Disconnect_req")))
+								)
+							
+								(defun W_Activated_1 "" () ()
+									(and (!= (get-named tokenobj "Signal/Connect_req") 0) (&gt;= time (get-named tokenobj "Signal/Connect_req")))
+								)
+							
+			(defun GNTrace "" () ()
+				(print "Step #" time)
+			)
+			(defun trace "" (param) ()
+				(print param)
+				(+ param 0)
+			)
+			
+			(defun ResetSignals "" (t) ()
+				
+			)
+			</gn:functions>
+  <gn:visual-parameters>
+    <gn:metric />
+    <gn:placeRadius>5</gn:placeRadius>
+    <gn:transitionTriangleSize sizeX="10" sizeY="10" />
+  </gn:visual-parameters>
+</gn:gn>

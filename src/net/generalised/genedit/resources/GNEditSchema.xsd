@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns="http://www.clbme.bas.bg/GN" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://www.clbme.bas.bg/GN" elementFormDefault="qualified">
+	<xsd:annotation>
+		<xsd:documentation xml:lang="en">
+			<xhtml:p>This is the modified GN Schema used by Genedit. It is based on version 1.10 of GN Schema</xhtml:p>
+			<xhtml:p>This schema enforces less restrictions of XML files in order to allow users to save incomplete GN models in XML files. In contrast to the original GN Schema, this schema allows:</xhtml:p>
+			<xhtml:ul>
+				<xhtml:li>Models with zero transitions</xhtml:li>
+				<xhtml:li>Transitions without input and/or output places</xhtml:li>
+			</xhtml:ul>
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:simpleType name="transitionType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:element name="point" type="visualPositionType"/>
+	<xsd:complexType name="pointList">
+		<xsd:sequence minOccurs="1" maxOccurs="unbounded">
+			<xsd:element ref="point" />
+    	</xsd:sequence>		
+	</xsd:complexType>
+	<xsd:simpleType name="capacityMatrix">
+		<xsd:list itemType="xsd:nonNegativeInteger"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="integerInf">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="-1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="placeRefType">
+		<xsd:all>
+			<xsd:element name="arc" type="pointList" minOccurs="0"/>
+		</xsd:all>
+		<xsd:attribute name="ref" type="xsd:NMTOKEN" use="required"/>
+	</xsd:complexType>
+	<xsd:element name="transition">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="inputs">
+					<xsd:complexType>
+						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="input" type="placeRefType"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="outputs">
+					<xsd:complexType>
+						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="output" type="placeRefType"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="predicates">
+					<xsd:complexType>
+						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="predicate">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="xsd:NMTOKEN">
+											<xsd:attribute name="input" type="xsd:IDREF" use="required"/>
+											<xsd:attribute name="output" type="xsd:IDREF" use="required"/>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="default" default="false">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:enumeration value="true"/>
+									<xsd:enumeration value="false"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="capacities" type="capacityMatrix" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attributeGroup ref="common"/>
+			<xsd:attributeGroup ref="visualBounds"/>
+			<xsd:attribute name="startTime" type="xsd:nonNegativeInteger" default="0"/>
+			<xsd:attribute name="lifeTime" type="integerInf" default="-1"/>
+			<xsd:attribute name="type" type="transitionType"/>
+			<!-- The transition type can be an identifier of a predicate, which should be evaluated every time
+             a transition is fired -->
+		</xsd:complexType>
+		<!-- keys -->
+		<xsd:key name="inputKey">
+			<xsd:selector xpath="inputs/input"/>
+			<xsd:field xpath="@ref"/>
+		</xsd:key>
+		<xsd:key name="outputKey">
+			<xsd:selector xpath="outputs/output"/>
+			<xsd:field xpath="@ref"/>
+		</xsd:key>
+		<xsd:key name="predicateKey">
+			<xsd:selector xpath="predicates/predicate"/>
+			<xsd:field xpath="@input"/>
+			<xsd:field xpath="@output"/>
+		</xsd:key>
+		<!-- keyrefs -->
+		<xsd:keyref name="predicateInputRef" refer="inputKey">
+			<xsd:selector xpath="predicates/predicate"/>
+			<xsd:field xpath="@input"/>
+		</xsd:keyref>
+		<xsd:keyref name="predicateOutputRef" refer="outputKey">
+			<xsd:selector xpath="predicates/predicate"/>
+			<xsd:field xpath="@output"/>
+		</xsd:keyref>
+	</xsd:element>
+	<xsd:attributeGroup name="common">
+		<xsd:attribute name="id" type="xsd:ID" use="required"/>
+		<xsd:attribute name="priority" type="xsd:nonNegativeInteger" default="0"/>
+		<xsd:attribute name="name" type="xsd:string" default=""/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="visualPosition">
+		<xsd:attribute name="positionX" type="visualCoordinatesType"/>
+		<xsd:attribute name="positionY" type="visualCoordinatesType"/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="visualSize">
+		<xsd:attribute name="sizeX" type="visualMetricType" default="0"/>
+		<xsd:attribute name="sizeY" type="visualMetricType" default="0"/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="visualBounds">
+		<xsd:attributeGroup ref="visualPosition"/>
+		<xsd:attributeGroup ref="visualSize"/>
+	</xsd:attributeGroup>
+	<xsd:element name="place">
+		<xsd:complexType>
+			<xsd:attributeGroup ref="common"/>
+			<xsd:attributeGroup ref="visualPosition"/>
+			<xsd:attribute name="char" type="xsd:string" default="ID"/>
+			<xsd:attribute name="capacity" type="integerInf" default="-1"/>
+			<xsd:attribute name="merge" type="xsd:boolean" default="false"/>
+			<xsd:attribute name="mergeRule" type="xsd:string" default="ID"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="charType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:element name="char">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="charType">
+					<xsd:attribute name="name" type="xsd:NMTOKEN" default="Default"/>
+					<xsd:attribute name="type" type="xsd:string" use="required"/>
+					<xsd:attribute name="history" type="xsd:positiveInteger" default="1"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="tokenType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element ref="char"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="common"/>
+		<xsd:attribute name="host" type="xsd:IDREF" use="required"/>
+		<xsd:attribute name="entering" type="xsd:nonNegativeInteger" default="0"/>
+		<xsd:attribute name="leaving" type="integerInf" default="-1"/>
+		<!-- obsolete -->
+		<!--
+      <xsd:attribute name="history" type="xsd:positiveInteger" default="1"/>
+      <xsd:attribute name="defaulttype" type="xsd:string" use="required"/>
+      <xsd:attribute name="default" type="xsd:string" use="required"/>
+-->
+	</xsd:complexType>
+	<xsd:simpleType name="generatorMode">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="periodic"/>
+			<xsd:enumeration value="conditional"/>
+			<xsd:enumeration value="random"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="generatorType">
+		<xsd:complexContent>
+			<xsd:extension base="tokenType">
+				<xsd:attribute name="type" type="generatorMode" use="required"/>
+				<xsd:attribute name="predicate" type="xsd:NMTOKEN" default="true"/>
+				<xsd:attribute name="period" type="xsd:positiveInteger" default="1"/>
+			</xsd:extension>
+			<!-- generator attributes -->
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="functionType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<!-- not used for the moment
+    functions are declared inline, without an id
+
+  <xsd:element name="function">
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="functionType">
+	  <xsd:attribute name="id" type="xsd:ID" use="required"/>
+	</xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+
+    <xsd:key name="functionKey">
+      <xsd:selector xpath="functions/function"/>
+      <xsd:field xpath="@id"/>
+    </xsd:key>
+
+-->
+	<xsd:element name="import">
+		<xsd:complexType>
+			<xsd:attribute name="fundefs" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="unitsType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="px"/>
+			<xsd:enumeration value="mm"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="visualMetricType">
+		<xsd:restriction base="xsd:double">
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="visualCoordinatesType">
+		<xsd:restriction base="xsd:double"/>
+	</xsd:simpleType>
+	<xsd:complexType name="visualSizeType">
+		<xsd:attributeGroup ref="visualSize"/>
+	</xsd:complexType>
+	<xsd:complexType name="visualPositionType">
+		<xsd:attributeGroup ref="visualPosition"/>
+	</xsd:complexType>
+	<xsd:complexType name="visualBoundsType">
+		<xsd:attributeGroup ref="visualBounds"/>
+	</xsd:complexType>
+	<xsd:element name="visual-parameters">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="metric">
+					<xsd:complexType>
+						<xsd:attribute name="units" type="unitsType" default="px"/>
+						<xsd:attribute name="value" type="xsd:double" default="1"/>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="placeRadius" type="visualMetricType"/>
+				<xsd:element name="transitionTriangleSize" type="visualSizeType"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="gn-model">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="gn"/>
+				<xsd:element ref="visual-parameters" minOccurs="0"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="gn">
+		<xsd:complexType>
+			<xsd:all>
+				<!-- still not implemented
+      
+        <xsd:element name="constants" minOccurs="0">
+          <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+          </xsd:complexType>
+        </xsd:element>
+      -->
+				<xsd:element name="transitions">
+					<xsd:complexType>
+						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+							<xsd:element ref="transition"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="places">
+					<xsd:complexType>
+						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+							<xsd:element ref="place"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="tokens">
+					<xsd:complexType>
+						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+							<xsd:choice>
+								<xsd:element name="token" type="tokenType">
+									<xsd:unique name="uniqueTokenChar">
+										<xsd:selector xpath="char"/>
+										<xsd:field xpath="@name"/>
+									</xsd:unique>
+								</xsd:element>
+								<xsd:element name="generator" type="generatorType">
+									<xsd:unique name="uniqueGeneratorChar">
+										<xsd:selector xpath="char"/>
+										<xsd:field xpath="@name"/>
+									</xsd:unique>
+								</xsd:element>
+							</xsd:choice>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="functions" minOccurs="0">
+				<!--TODO: CDATA!!!-->
+					<xsd:complexType mixed="true">
+						<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+							<xsd:element ref="import"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="visual-parameters" minOccurs="0"/>
+			</xsd:all>
+			<xsd:attributeGroup ref="visualBounds"/>
+			<xsd:attribute name="name" type="xsd:ID" use="required"/>
+			<xsd:attribute name="time" type="xsd:positiveInteger"/>
+			<xsd:attribute name="timeStep" type="xsd:positiveInteger" default="1"/>
+			<xsd:attribute name="timeStart" type="xsd:nonNegativeInteger" default="0"/>
+			<xsd:attribute name="fundefs" type="xsd:string"/>
+			<xsd:attribute name="root" type="xsd:boolean" default="false"/>
+			<xsd:attribute name="language"/>
+		</xsd:complexType>
+		<!-- keys -->
+		<xsd:key name="transitionKey">
+			<xsd:selector xpath="transitions/transition"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<xsd:key name="placeKey">
+			<xsd:selector xpath="places/place"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<xsd:key name="tokenKey">
+			<xsd:selector xpath="tokens/token"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<!-- keyrefs -->
+		<xsd:keyref name="hostPlaceReference" refer="placeKey">
+			<xsd:selector xpath="tokens/token | tokens/generator"/>
+			<xsd:field xpath="@host"/>
+		</xsd:keyref>
+		<xsd:keyref name="transPlaceReference" refer="placeKey">
+			<xsd:selector xpath="transitions/transition/inputs/input | transitions/transition/outputs/output"/>
+			<xsd:field xpath="@ref"/>
+		</xsd:keyref>
+	</xsd:element>
+</xsd:schema>

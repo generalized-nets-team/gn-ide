@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gn xmlns="http://www.clbme.bas.bg/GN" name="sample">
+  <transitions>
+    <transition id="Z1" name="Z1" priority="0" startTime="0" lifeTime="-1" positionX="220" positionY="100" sizeY="250">
+      <inputs>
+        <input ref="L1">
+          <arc>
+            <point positionX="180" positionY="130"/>
+            <point positionX="220" positionY="130"/>
+          </arc>
+        </input>
+        <input ref="L2">
+          <arc>
+            <point positionX="180" positionY="190"/>
+            <point positionX="220" positionY="190"/>
+          </arc>
+        </input>
+        <input ref="L6">
+          <arc>
+            <point positionX="260" positionY="330"/>
+            <point positionX="290" positionY="330"/>
+            <point positionX="290" positionY="370"/>
+            <point positionX="200" positionY="370"/>
+            <point positionX="200" positionY="330"/>
+            <point positionX="220" positionY="330"/>
+          </arc>
+        </input>
+        <input ref="T4">
+          <arc>
+            <point positionX="450" positionY="370"/>
+            <point positionX="500" positionY="370"/>
+            <point positionX="500" positionY="510"/>
+            <point positionX="190" positionY="510"/>
+            <point positionX="190" positionY="310"/>
+            <point positionX="220" positionY="310"/>
+          </arc>
+        </input>
+      </inputs>
+      <outputs>
+        <output ref="L3">
+          <arc>
+            <point positionX="220" positionY="130"/>
+            <point positionX="260" positionY="130"/>
+          </arc>
+        </output>
+        <output ref="L4">
+          <arc>
+            <point positionX="220" positionY="190"/>
+            <point positionX="260" positionY="190"/>
+          </arc>
+        </output>
+        <output ref="L5">
+          <arc>
+            <point positionX="220" positionY="260"/>
+            <point positionX="260" positionY="260"/>
+          </arc>
+        </output>
+        <output ref="L6">
+          <arc>
+            <point positionX="220" positionY="330"/>
+            <point positionX="260" positionY="330"/>
+          </arc>
+        </output>
+      </outputs>
+      <predicates>
+        <predicate input="L1" output="L3">true</predicate>
+        <predicate input="L1" output="L4">false</predicate>
+        <predicate input="L1" output="L5">false</predicate>
+        <predicate input="L1" output="L6">false</predicate>
+        <predicate input="L2" output="L3">false</predicate>
+        <predicate input="L2" output="L4">false</predicate>
+        <predicate input="L2" output="L5">false</predicate>
+        <predicate input="L2" output="L6">true</predicate>
+        <predicate input="L6" output="L3">false</predicate>
+        <predicate input="L6" output="L4">false</predicate>
+        <predicate input="L6" output="L5">false</predicate>
+        <predicate input="L6" output="L6">true</predicate>
+        <predicate input="T4" output="L3">false</predicate>
+        <predicate input="T4" output="L4">false</predicate>
+        <predicate input="T4" output="L5">false</predicate>
+        <predicate input="T4" output="L6">false</predicate>
+      </predicates>
+    </transition>
+    <transition id="Z2" name="Z2" priority="0" startTime="0" lifeTime="-1" positionX="410" positionY="100" sizeY="380">
+      <inputs>
+        <input ref="L3">
+          <arc>
+            <point positionX="260" positionY="130"/>
+            <point positionX="410" positionY="130"/>
+          </arc>
+        </input>
+        <input ref="L62">
+          <arc>
+            <point positionX="350" positionY="390"/>
+            <point positionX="410" positionY="390"/>
+          </arc>
+        </input>
+        <input ref="L7">
+          <arc>
+            <point positionX="350" positionY="170"/>
+            <point positionX="410" positionY="170"/>
+          </arc>
+        </input>
+        <input ref="L8">
+          <arc>
+            <point positionX="350" positionY="220"/>
+            <point positionX="410" positionY="220"/>
+          </arc>
+        </input>
+        <input ref="L9">
+          <arc>
+            <point positionX="350" positionY="280"/>
+            <point positionX="410" positionY="280"/>
+          </arc>
+        </input>
+        <input ref="L10">
+          <arc>
+            <point positionX="350" positionY="330"/>
+            <point positionX="410" positionY="330"/>
+          </arc>
+        </input>
+        <input ref="T1">
+          <arc>
+            <point positionX="450" positionY="460"/>
+            <point positionX="490" positionY="460"/>
+            <point positionX="490" positionY="500"/>
+            <point positionX="390" positionY="500"/>
+            <point positionX="390" positionY="440"/>
+            <point positionX="410" positionY="440"/>
+          </arc>
+        </input>
+        <input ref="T5">
+          <arc>
+            <point positionX="590" positionY="130"/>
+            <point positionX="600" positionY="130"/>
+            <point positionX="600" positionY="57"/>
+            <point positionX="370" positionY="57"/>
+            <point positionX="370" positionY="110"/>
+            <point positionX="410" positionY="110"/>
+          </arc>
+        </input>
+      </inputs>
+      <outputs>
+        <output ref="T1">
+          <arc>
+            <point positionX="410" positionY="460"/>
+            <point positionX="450" positionY="460"/>
+          </arc>
+        </output>
+        <output ref="T2">
+          <arc>
+            <point positionX="410" positionY="150"/>
+            <point positionX="450" positionY="150"/>
+          </arc>
+        </output>
+        <output ref="T3">
+          <arc>
+            <point positionX="410" positionY="300"/>
+            <point positionX="450" positionY="300"/>
+          </arc>
+        </output>
+        <output ref="T4">
+          <arc>
+            <point positionX="410" positionY="370"/>
+            <point positionX="450" positionY="370"/>
+          </arc>
+        </output>
+      </outputs>
+      <predicates>
+        <predicate input="L3" output="T1">false</predicate>
+        <predicate input="L3" output="T2">true</predicate>
+        <predicate input="L3" output="T3">false</predicate>
+        <predicate input="L3" output="T4">false</predicate>
+        <predicate input="L62" output="T1">true</predicate>
+        <predicate input="L62" output="T2">false</predicate>
+        <predicate input="L62" output="T3">false</predicate>
+        <predicate input="L62" output="T4">false</predicate>
+        <predicate input="L7" output="T1">false</predicate>
+        <predicate input="L7" output="T2">true</predicate>
+        <predicate input="L7" output="T3">false</predicate>
+        <predicate input="L7" output="T4">false</predicate>
+        <predicate input="L8" output="T1">false</predicate>
+        <predicate input="L8" output="T2">false</predicate>
+        <predicate input="L8" output="T3">true</predicate>
+        <predicate input="L8" output="T4">false</predicate>
+        <predicate input="L9" output="T1">false</predicate>
+        <predicate input="L9" output="T2">false</predicate>
+        <predicate input="L9" output="T3">false</predicate>
+        <predicate input="L9" output="T4">true</predicate>
+        <predicate input="L10" output="T1">true</predicate>
+        <predicate input="L10" output="T2">false</predicate>
+        <predicate input="L10" output="T3">false</predicate>
+        <predicate input="L10" output="T4">false</predicate>
+        <predicate input="T1" output="T1">false</predicate>
+        <predicate input="T1" output="T2">false</predicate>
+        <predicate input="T1" output="T3">true</predicate>
+        <predicate input="T1" output="T4">false</predicate>
+        <predicate input="T5" output="T1">false</predicate>
+        <predicate input="T5" output="T2">false</predicate>
+        <predicate input="T5" output="T3">false</predicate>
+        <predicate input="T5" output="T4">false</predicate>
+      </predicates>
+    </transition>
+    <transition id="Z3" name="Z3" priority="0" startTime="0" lifeTime="-1" positionX="520" positionY="110" sizeY="100">
+      <inputs>
+        <input ref="T2">
+          <arc>
+            <point positionX="450" positionY="150"/>
+            <point positionX="520" positionY="150"/>
+          </arc>
+        </input>
+      </inputs>
+      <outputs>
+        <output ref="T5">
+          <arc>
+            <point positionX="520" positionY="130"/>
+            <point positionX="570" positionY="130"/>
+          </arc>
+        </output>
+        <output ref="T6">
+          <arc>
+            <point positionX="520" positionY="190"/>
+            <point positionX="570" positionY="190"/>
+          </arc>
+        </output>
+      </outputs>
+      <predicates>
+        <predicate input="T2" output="T5">W_T2_T5</predicate>
+        <predicate input="T2" output="T6">W_T2_T6</predicate>
+      </predicates>
+    </transition>
+    <transition id="Z4" name="Z4" priority="0" startTime="0" lifeTime="-1" positionX="530" positionY="260" sizeY="170">
+      <inputs>
+        <input ref="T3">
+          <arc>
+            <point positionX="470" positionY="300"/>
+            <point positionX="530" positionY="300"/>
+          </arc>
+        </input>
+        <input ref="T6">
+          <arc>
+            <point positionX="590" positionY="190"/>
+            <point positionX="600" positionY="190"/>
+            <point positionX="600" positionY="220"/>
+            <point positionX="490" positionY="220"/>
+            <point positionX="490" positionY="280"/>
+            <point positionX="530" positionY="280"/>
+          </arc>
+        </input>
+        <input ref="T9">
+          <arc>
+            <point positionX="580" positionY="410"/>
+            <point positionX="610" positionY="410"/>
+            <point positionX="610" positionY="440"/>
+            <point positionX="510" positionY="440"/>
+            <point positionX="510" positionY="410"/>
+            <point positionX="530" positionY="410"/>
+          </arc>
+        </input>
+      </inputs>
+      <outputs>
+        <output ref="T7">
+          <arc>
+            <point positionX="530" positionY="290"/>
+            <point positionX="580" positionY="290"/>
+          </arc>
+        </output>
+        <output ref="T8">
+          <arc>
+            <point positionX="530" positionY="350"/>
+            <point positionX="580" positionY="350"/>
+          </arc>
+        </output>
+        <output ref="T9">
+          <arc>
+            <point positionX="530" positionY="410"/>
+            <point positionX="580" positionY="410"/>
+          </arc>
+        </output>
+      </outputs>
+      <predicates>
+        <predicate input="T3" output="T7">false</predicate>
+        <predicate input="T3" output="T8">false</predicate>
+        <predicate input="T3" output="T9">true</predicate>
+        <predicate input="T6" output="T7">true</predicate>
+        <predicate input="T6" output="T8">false</predicate>
+        <predicate input="T6" output="T9">false</predicate>
+        <predicate input="T9" output="T7">false</predicate>
+        <predicate input="T9" output="T8">true</predicate>
+        <predicate input="T9" output="T9">false</predicate>
+      </predicates>
+    </transition>
+    <transition id="Z5" name="Z5" priority="0" startTime="0" lifeTime="-1" positionX="660" positionY="260" sizeY="70">
+      <inputs>
+        <input ref="T7">
+          <arc>
+            <point positionX="590" positionY="290"/>
+            <point positionX="660" positionY="290"/>
+          </arc>
+        </input>
+      </inputs>
+      <outputs>
+        <output ref="T10">
+          <arc>
+            <point positionX="660" positionY="290"/>
+            <point positionX="710" positionY="290"/>
+          </arc>
+        </output>
+      </outputs>
+      <predicates>
+        <predicate input="T7" output="T10">true</predicate>
+      </predicates>
+    </transition>
+  </transitions>
+  <places>
+    <place id="L1" name="L1" priority="0" capacity="-1" merge="false" positionX="180" positionY="130"/>
+    <place id="L2" name="L2" priority="0" capacity="-1" merge="false" positionX="180" positionY="190"/>
+    <place id="L6" name="L6" priority="0" capacity="-1" merge="false" positionX="260" positionY="330"/>
+    <place id="T4" name="T4" priority="0" capacity="-1" merge="false" positionX="450" positionY="370"/>
+    <place id="L3" name="L3" priority="0" capacity="-1" merge="false" positionX="260" positionY="130"/>
+    <place id="L4" name="L4" priority="0" capacity="-1" merge="false" positionX="260" positionY="190"/>
+    <place id="L5" name="L5" priority="0" capacity="-1" merge="false" positionX="260" positionY="260"/>
+    <place id="L62" name="L62" priority="0" capacity="-1" merge="false" positionX="350" positionY="390"/>
+    <place id="L7" name="L7" priority="0" capacity="-1" merge="false" positionX="350" positionY="170"/>
+    <place id="L8" name="L8" priority="0" capacity="-1" merge="false" positionX="350" positionY="220"/>
+    <place id="L9" name="L9" priority="0" capacity="-1" merge="false" positionX="350" positionY="280"/>
+    <place id="L10" name="L10" priority="0" capacity="-1" merge="false" positionX="350" positionY="330"/>
+    <place id="T1" name="T1" priority="0" capacity="-1" merge="false" positionX="450" positionY="460"/>
+    <place id="T5" name="T5" priority="0" capacity="-1" merge="false" positionX="570" positionY="130"/>
+    <place id="T2" name="T2" priority="0" capacity="-1" merge="false" positionX="450" positionY="150"/>
+    <place id="T3" name="T3" priority="0" capacity="-1" merge="false" positionX="450" positionY="300"/>
+    <place id="T6" name="T6" priority="0" capacity="-1" merge="false" positionX="570" positionY="190"/>
+    <place id="T9" name="T9" priority="0" capacity="-1" merge="false" positionX="580" positionY="410"/>
+    <place id="T7" name="T7" priority="0" capacity="-1" merge="false" positionX="580" positionY="290"/>
+    <place id="T8" name="T8" priority="0" capacity="-1" merge="false" positionX="580" positionY="350"/>
+    <place id="T10" name="T10" priority="0" capacity="-1" merge="false" positionX="710" positionY="290"/>
+  </places>
+  <tokens>
+    <token id="Alpha1" name="Alpha1" priority="0" host="L1" entering="0" leaving="-1">
+      <char name="Color" type="string" history="1">red</char>
+      <char name="Default" type="string" history="1">1</char>
+    </token>
+    <token id="Alpha2" name="Alpha2" priority="0" host="L1" entering="1" leaving="-1">
+      <char name="Color" type="string" history="1">green</char>
+      <char name="Default" type="string" history="1">2</char>
+    </token>
+    <token id="Alpha3" name="Alpha3" priority="0" host="L1" entering="2" leaving="-1">
+    </token>
+    <token id="Beta1" name="Beta1" priority="0" host="L2" entering="0" leaving="-1">
+      <char name="Color" type="string" history="1">blue</char>
+      <char name="Default" type="string" history="1">56</char>
+    </token>
+    <token id="Beta2" name="Beta2" priority="0" host="L62" entering="0" leaving="-1">
+      <char name="Color" type="string" history="1">0090D0</char>
+    </token>
+  </tokens>
+  <functions>
+(defun W_T2_T5 "" () ()
+  (and 1 1)
+)
+
+(defun W_T2_T6 "" () ()
+  (and 1 1)
+)
+  </functions>
+</gn>

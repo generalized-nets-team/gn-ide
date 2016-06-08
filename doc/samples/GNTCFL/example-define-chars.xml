@@ -1,0 +1,105 @@
+<?xml version = "1.0"?>
+
+<gn xmlns = "http://www.clbme.bas.bg/GN" name = "example-define-chars" time = "256">
+     <transitions>
+      <transition id = "T">
+         <inputs>
+            <input ref = "LStart"/>
+         </inputs>
+         <outputs>
+            <output ref = "LEnd"/>
+         </outputs>
+         <predicates>
+            <predicate input = "LStart" output = "LEnd">true</predicate>
+         </predicates>
+      </transition>
+   </transitions>
+   <places>
+      <place id = "LStart" priority = "1" char = "CharLStart"/>
+      <place id = "LEnd" priority = "1" char = "CharLEnd"/>
+   </places>
+   <tokens>
+      <token id = "Tkn" host = "LStart">
+         <char name = "Default" type = "double">0</char>
+         <char name = "array" type = "vector">[ 1 2 3]</char>
+         <char name = "testDouble" type = "double">0</char>
+      </token>
+	</tokens>
+   <functions>; CHAR FUNCTIONS
+; ----------
+
+
+(defun getParam "" (tkn param) (distribution)
+
+	(if (= (get-named tkn (+ param "/type")) "explicit") 
+	
+	;--------- explicit parameter
+		(get-named tkn param) 
+	
+	;---------- manual parameter?
+	
+	(if (= (get-named tkn (+ param "/type")) "manual") 
+	
+	(begin
+	
+		(print "Please enter the value of " param " :")
+		(read-double)
+	
+	);begin manual parameter
+	
+	;--------- random parameter
+	
+		(begin
+		
+			(let distribution (get-named tkn (+ param "/distribution")))
+
+
+			(if (= distribution "uniform")
+			
+				;------------ uniform distribution
+				
+				(random (get-named tkn (+ param "/interval-end")))
+				
+				;---------------------------------
+				
+				(if (= distribution "normal")
+				
+				;------------ normal distribution
+				
+					(random-normal (get-named tkn (+ param "/mean"))
+												 (get-named tkn (+ param "/variance")))
+					
+				;--------------------------------
+					(if (= distribution "exponential")
+					
+				;------------ exponential distribution	
+					(random-exp (get-named tkn (+ param "/mean")))
+											
+					;---------------------------------
+					(+ 0) 
+					
+					);if exp
+				);if norm
+			);if uniform
+		
+		);begin
+	 );if manual
+	);if explicit
+); defun
+
+(defun CharLStart  "" () ()
+ 
+   (print "start")
+   )
+ 
+
+(defun CharLEnd  "" () ()
+	 (def-ch tokenobj )
+	 (print (xml-output tokenobj))
+	 (print "Parameter 'array': " (getParam tokenobj "array")) (newline)
+	 (print "Parameter 'testDouble': " (getParam tokenobj "testDouble")) (newline)
+)
+
+
+</functions>
+</gn>

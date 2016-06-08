@@ -1,0 +1,104 @@
+<project name="Genedit" default="all">
+
+	<property name="destdir" value="distribution" />
+	<!--<property name="tmpdir" value="${java.io.tmpdir}/${ant.project.name}" />-->
+	<property name="zipfile" value="${user.home}/Desktop/${ant.project.name}.zip" />
+	<property name="jwsdir" value="${user.home}/Desktop/jws" />
+
+	<target name="clean">
+		<delete dir="${destdir}" />
+		<delete file="${zipfile}" />
+		<delete dir="${jwsdir}" />
+		<delete>
+			<fileset dir="bin" includes="**/*" />
+		</delete>
+	</target>
+
+	<target name="create_jars" depends="clean">
+		<path id="master-classpath">
+			<fileset dir="lib/main" includes="**/*.jar" />
+			<file file="swt.jar" />
+		</path>
+		<javac srcdir="src" destdir="bin"
+			classpathref="master-classpath"/>
+		
+		<mkdir dir="${destdir}" />
+		<copy todir="bin/net/generalised/genedit/resources"> <!-- FIXME -->
+			<fileset dir="src/net/generalised/genedit/resources" />
+		</copy>
+		<jar destfile="${destdir}/${ant.project.name}.jar"> <!-- level="0" not good for JWS -->
+			<fileset dir="bin" />
+			<zipgroupfileset dir="lib/main" includes="**/*.jar" />
+			<manifest>
+				<attribute name="Main-Class" value="net.generalised.genedit.main.Main" />
+				<attribute name="Class-Path" value="swt.jar" />
+			</manifest>
+		</jar>
+		<copy todir="${destdir}" flatten="true">
+			<fileset dir="lib/swt" includes="**/*.jar" />
+		</copy>
+	</target>
+
+	<target name="create_distribution" depends="create_jars">
+		<copy todir="${destdir}" flatten="true">
+			<fileset dir="deployment" includes="**/*" />
+			<file file="src/net/generalised/genedit/resources/GNschema.xsd"/>
+		</copy>
+		<chmod dir="${destdir}" includes="**/*.sh" perm="ugo+x"/>
+		<!-- file permission are lost; check this: <shellscript shell="sh" dir="abc" failonerror="true">zip -ry abc.zip *</shellscript> -->
+	</target>
+
+	<target name="create_zip" depends="create_distribution">
+		
+		<!--<typedef resource="com/googlecode/svntask/svntask.xml">
+			<classpath>
+				<fileset dir="lib/ant">
+					<include name="svnkit.jar" />
+					<include name="svntask.jar" />
+				</fileset>
+			</classpath>
+		</typedef>
+		<svn><info path=".." revisionProperty="revisionVersion" /></svn>-->
+
+		<tstamp/>
+		<echo file="${destdir}/version_${DSTAMP}"></echo>
+		
+		<zip destfile="${zipfile}" basedir="${destdir}" />
+	</target>
+	
+	<target name="upload_zip" depends="create_zip">
+		<input message="Username for FTP server:" addproperty="username"/>
+		<input message="Password for FTP server:" addproperty="password"/>
+		
+		<!--<taskdef name="ftp"
+		         classname="org.apache.tools.ant.taskdefs.optional.net.FTP">
+			<classpath>
+				<pathelement location="lib/ant/commons-net-3.1.jar"/>
+			</classpath>
+		</taskdef>-->
+		
+		<!-- use ant.sh for this to work -->
+		<ftp server="debian.fmi.uni-sofia.bg" userid="${username}" password="${password}" verbose="yes">
+			<fileset file="${zipfile}"/>
+		</ftp>
+	</target>
+
+	<target name="java_web_start" depends="create_distribution">
+		<mkdir dir="${jwsdir}" />
+		<signjar destDir="${jwsdir}"
+			keystore="jws/gnKeys"
+			alias="mitex" 
+			storepass="genesis" >
+			<path>
+		    	<fileset dir="${destdir}" includes="**/*.jar" />
+		  	</path>
+		</signjar>
+		<copy todir="${jwsdir}" file="src/net/generalised/genedit/resources/GNSchema.xsd" /> <!-- TODO: in jar only -->
+		<copy todir="${jwsdir}" file="jws/genedit.jnlp" />
+		<!-- TODO: ftp -->
+	</target>
+
+	<target name="all" depends="upload_zip,java_web_start">
+	</target>
+
+</project>
