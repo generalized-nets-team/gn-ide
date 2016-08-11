@@ -2,7 +2,6 @@ package net.generalised.genedit.api;
 
 import java.util.List;
 
-import net.generalised.genedit.simulation.model.GnEvent;
 import net.generalised.genedit.simulation.model.SimulationException;
 
 public class GeneralizedNetFacade {
