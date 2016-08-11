@@ -1,6 +1,6 @@
 package net.generalised.genedit.baseapp.model;
 
-import net.generalised.genedit.demo.DemoMain;
+// import net.generalised.genedit.demo.DemoMain;
 
 /**
  * @author Dimitar Dimitrov
@@ -33,7 +33,7 @@ public class ModelWithHistory extends BaseModel implements BaseObservable {
 
 		commands.firstExecute(command);
 
-		modified = !DemoMain.inDemoMode;//true
+		// modified = !DemoMain.inDemoMode;//true
 		
 		BaseModel affectedObject = command.getAffectedObject();
 		if (affectedObject == null) {
@@ -48,7 +48,7 @@ public class ModelWithHistory extends BaseModel implements BaseObservable {
 		//be6e: if ! simul...
 		int actual = commands.undo(levels);
 		if (actual > 0) {
-			this.modified = !DemoMain.inDemoMode;//true
+			// this.modified = !DemoMain.inDemoMode;//true
 			notifyObservers();//TODO: izmisli kvo da se podava, 4e inak Tree ne se update-va
 		}
 		//TODO: ako se varnem v sastoqnie, koeto e saved, this.modified = false
@@ -58,7 +58,7 @@ public class ModelWithHistory extends BaseModel implements BaseObservable {
 		//be6e: if ! simul...
 		int actual = commands.redo(levels);
 		if (actual > 0) {
-			this.modified = !DemoMain.inDemoMode;//true
+			// this.modified = !DemoMain.inDemoMode;//true
 			notifyObservers();//TODO: izmisli kvo da se podava, 4e inak Tree ne se update-va
 		}
 	}

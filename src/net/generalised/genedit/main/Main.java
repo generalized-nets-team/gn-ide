@@ -2,6 +2,9 @@ package net.generalised.genedit.main;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLClassLoader;
 
 import net.generalised.genedit.baseapp.SettingsManager;
 import net.generalised.genedit.baseapp.plugins.PluginsRegistry;
@@ -29,31 +32,36 @@ import org.eclipse.swt.widgets.Shell;
  */
 public class Main {
 
-//	private static void loadSwtJar() {
-//	String swtFileName = "";
-//    try {
-//        String osName = System.getProperty("os.name").toLowerCase();
-//        String osArch = System.getProperty("os.arch").toLowerCase();
-//        URLClassLoader classLoader = (URLClassLoader) new Object().getClass().getClassLoader();
-//        Method addUrlMethod = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
-//        addUrlMethod.setAccessible(true);
-//
-//        String swtFileNameOsPart = 
-//            osName.contains("win") ? "win32" :
-//            osName.contains("mac") ? "macosx" :
-//            osName.contains("linux") || osName.contains("nix") ? "linux_gtk" :
-//            ""; // throw new RuntimeException("Unknown OS name: "+osName)
-//
-//        String swtFileNameArchPart = osArch.contains("64") ? "x64" : "x86";
-//        swtFileName = "swt_"+swtFileNameOsPart+"_"+swtFileNameArchPart+".jar";
-//        URL swtFileUrl = new URL("rsrc:"+swtFileName); // I am using Jar-in-Jar class loader which understands this URL; adjust accordingly if you don't
-//        addUrlMethod.invoke(classLoader, swtFileUrl);
-//    }
-//    catch(Exception e) {
-//        System.out.println("Unable to add the swt jar to the class path: " + swtFileName);
-//        e.printStackTrace();
-//    }
-//}
+	private static void loadSwtJar() {
+	String swtFileName = "";
+    try {
+        String osName = System.getProperty("os.name").toLowerCase();
+        String osArch = System.getProperty("os.arch").toLowerCase();
+        URLClassLoader classLoader = (URLClassLoader) ClassLoader.getSystemClassLoader(); //new Object().getClass().getClassLoader();
+        Method addUrlMethod = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
+        addUrlMethod.setAccessible(true);
+
+        String swtFileNameOsPart = 
+            osName.contains("win") ? "win32" :
+            osName.contains("mac") ? "macosx" :
+            osName.contains("linux") || osName.contains("nix") ? "linux" :
+            ""; // throw new RuntimeException("Unknown OS name: "+osName)
+        String swtFileNameArchPart = osArch.contains("64") ? "64" : "32";
+        swtFileName = "swt-"+swtFileNameOsPart+swtFileNameArchPart+".jar";
+        //URL swtFileUrl = new URL(); // I am using Jar-in-Jar class loader which understands this URL; adjust accordingly if you don't
+        System.out.println("/media/SharedExt4/gnpackage/gn-ide/lib/swt/"+swtFileName);
+        System.out.println(classLoader);
+        addUrlMethod.invoke(classLoader, new File("/media/SharedExt4/gnpackage/gn-ide/lib/swt/"+swtFileName).toURI().toURL());
+        
+        // TODO replace swt.jar in classpath
+		// String cp = "/media/SharedExt4/gnpackage/gn-ide/bin:/usr/share/eclipse/dropins/jdt/plugins/org.junit_4.8.2.dist/junit.jar:/usr/share/eclipse/dropins/jdt/plugins/org.hamcrest.core_1.3.0.jar:/media/SharedExt4/gnpackage/gn-ide/lib/swt-linux64.jar:/media/SharedExt4/gnpackage/gn-ide/lib/main/org.swtchart_0.8.0.v20120301.jar:/media/SharedExt4/gnpackage/gn-ide/lib/main/js.jar";
+		// System.setProperty("java.class.path", cp);
+    }
+    catch(Exception e) {
+        System.out.println("Unable to add the swt jar to the class path: " + swtFileName);
+        e.printStackTrace();
+    }
+}
 
 	/**
 	 * @param view
@@ -132,10 +140,9 @@ public class Main {
 	}
 	
 	public void run(String[] args) {
-		// TODO: add swt-xxx.jar as argument?
-		// TODO: iterate over all swt-*jar files; catch exceptions until started
 //		System.out.println("start");
 		// loadSwtJar();
+		
 //		try {
 //			URLClassLoader classLoader = (URLClassLoader) new Object().getClass().getClassLoader();
 //	        Method addUrlMethod = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
@@ -149,7 +156,6 @@ public class Main {
 //		}
 		
 		// TODO, especially for demos: GCJ! http://vertis.github.com/2007/06/24/native-java-with-gcj-and-swt.html
-		
 		MainForm inst = new MainForm();
 		createMainWindow(inst);
 

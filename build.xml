@@ -1,9 +1,10 @@
 <project name="Genedit" default="all">
 
-	<property name="destdir" value="distribution" />
+	<property name="destdir" value="distribution/tmp" />
 	<!--<property name="tmpdir" value="${java.io.tmpdir}/${ant.project.name}" />-->
-	<property name="zipfile" value="${user.home}/Desktop/${ant.project.name}.zip" />
-	<property name="jwsdir" value="${user.home}/Desktop/jws" />
+	<property name="zipfile" value="distribution/${ant.project.name}.zip" />
+	<property name="apijar" value="distribution/gn-api.jar" />
+	<property name="jwsdir" value="distribution/jws" />
 
 	<target name="clean">
 		<delete dir="${destdir}" />
@@ -14,7 +15,7 @@
 		</delete>
 	</target>
 
-	<target name="create_jars" depends="clean">
+	<target name="create_jars" depends="clean"> <!-- GN IDE only, not the API -->
 		<path id="master-classpath">
 			<fileset dir="lib/main" includes="**/*.jar" />
 			<file file="swt.jar" />
@@ -37,6 +38,35 @@
 		<copy todir="${destdir}" flatten="true">
 			<fileset dir="lib/swt" includes="**/*.jar" />
 		</copy>
+	</target>
+	
+	<target name="create_api_jar" depends="clean">
+		<delete>
+			<fileset dir="bin" includes="**/*" />
+		</delete>
+
+		<path id="master-classpath"> <!-- TODO remove? -->
+			<fileset dir="lib/main" includes="js.jar" />
+		</path>
+		<javac srcdir="src" sourcepath="" destdir="bin" classpathref="master-classpath"> <!-- FIXME -->
+			<include name="net/generalised/genedit/api/"/>
+			<include name="net/generalised/genedit/baseapp/"/>
+			<exclude name="net/generalised/genedit/baseapp/view/"/>
+			<exclude name="net/generalised/genedit/baseapp/controller/"/>
+			<include name="net/generalised/genedit/model/"/>
+			<include name="net/generalised/genedit/simulation/SimulationConfigProperties.java"/>
+			<include name="net/generalised/genedit/simulation/model/"/>
+			<exclude name="net/generalised/genedit/simulation/model/real/"/>
+			<include name="net/generalised/genedit/main/MainConfigProperties.java"/>
+			<include name="net/generalised/genedit/view/Constants.java"/>
+		</javac>
+		
+		<mkdir dir="${destdir}" />
+		<copy todir="bin/net/generalised/genedit/resources" file="src/net/generalised/genedit/resources/GNschema.xsd" /> <!-- FIXME -->
+		<jar destfile="${apijar}">
+			<fileset dir="bin" />
+			<zipgroupfileset dir="lib/main" includes="**/*.jar" />
+		</jar>
 	</target>
 
 	<target name="create_distribution" depends="create_jars">
@@ -63,12 +93,16 @@
 		<tstamp/>
 		<echo file="${destdir}/version_${DSTAMP}"></echo>
 		
-		<zip destfile="${zipfile}" basedir="${destdir}" />
+		<zip destfile="${zipfile}" basedir="${destdir}" /> <!-- does not preserve run.sh's executable attribute -->
+		<!-- <zip destfile="${zipfile}">
+					<zipfileset dir="${destdir}" />
+					<zipfileset src="${destdir}/run.sh" filemode="777" />
+				</zip> -->
 	</target>
 	
-	<target name="upload_zip" depends="create_zip">
+	<!--<target name="upload_zip" depends="create_zip">
 		<input message="Username for FTP server:" addproperty="username"/>
-		<input message="Password for FTP server:" addproperty="password"/>
+		<input message="Password for FTP server:" addproperty="password"/>-->
 		
 		<!--<taskdef name="ftp"
 		         classname="org.apache.tools.ant.taskdefs.optional.net.FTP">
@@ -78,10 +112,10 @@
 		</taskdef>-->
 		
 		<!-- use ant.sh for this to work -->
-		<ftp server="debian.fmi.uni-sofia.bg" userid="${username}" password="${password}" verbose="yes">
+<!--		<ftp server="debian.fmi.uni-sofia.bg" userid="${username}" password="${password}" verbose="yes">
 			<fileset file="${zipfile}"/>
 		</ftp>
-	</target>
+	</target>-->
 
 	<target name="java_web_start" depends="create_distribution">
 		<mkdir dir="${jwsdir}" />
@@ -98,7 +132,8 @@
 		<!-- TODO: ftp -->
 	</target>
 
-	<target name="all" depends="upload_zip,java_web_start">
+	<target name="all" depends="create_zip,create_api_jar,java_web_start"> <!--upload_zip instead of create_zip-->
+		<delete dir="${destdir}" />
 	</target>
 
 </project>
