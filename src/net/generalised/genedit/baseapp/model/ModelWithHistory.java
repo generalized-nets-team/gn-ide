@@ -34,6 +34,7 @@ public class ModelWithHistory extends BaseModel implements BaseObservable {
 		commands.firstExecute(command);
 
 		// modified = !DemoMain.inDemoMode;//true
+		modified = true;
 		
 		BaseModel affectedObject = command.getAffectedObject();
 		if (affectedObject == null) {
@@ -49,6 +50,7 @@ public class ModelWithHistory extends BaseModel implements BaseObservable {
 		int actual = commands.undo(levels);
 		if (actual > 0) {
 			// this.modified = !DemoMain.inDemoMode;//true
+			modified = true;
 			notifyObservers();//TODO: izmisli kvo da se podava, 4e inak Tree ne se update-va
 		}
 		//TODO: ako se varnem v sastoqnie, koeto e saved, this.modified = false
@@ -59,6 +61,7 @@ public class ModelWithHistory extends BaseModel implements BaseObservable {
 		int actual = commands.redo(levels);
 		if (actual > 0) {
 			// this.modified = !DemoMain.inDemoMode;//true
+			modified = true;
 			notifyObservers();//TODO: izmisli kvo da se podava, 4e inak Tree ne se update-va
 		}
 	}
